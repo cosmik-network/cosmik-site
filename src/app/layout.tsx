@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Archivo } from "next/font/google";
 import {
   ColorSchemeScript,
   mantineHtmlProps,
@@ -14,13 +15,17 @@ export const metadata: Metadata = {
     "Cosmik builds tools that help you understand and organize research discussions across social media, powered by collective intelligence and semantic AI.",
 };
 
+const archivo = Archivo({
+  subsets: ["latin"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="en" className={archivo.className} {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
       </head>
