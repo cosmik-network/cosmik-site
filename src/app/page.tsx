@@ -1,9 +1,5 @@
-import { Container, Title } from "@mantine/core";
+import { Container } from "@mantine/core";
 
 export default function Page() {
-  return (
-    <Container>
-      <Title order={1}>Cosmik</Title>
-    </Container>
-  );
+  return <Container></Container>;
 }

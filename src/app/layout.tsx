@@ -5,6 +5,8 @@ import {
   MantineProvider,
 } from "@mantine/core";
 import "@mantine/core/styles.css";
+import AppLayout from "@/components/appLayout/AppLayout";
+import { theme } from "@/styles/theme";
 
 export const metadata: Metadata = {
   title: "Cosmik",
@@ -23,7 +25,9 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
-        <MantineProvider>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <AppLayout>{children}</AppLayout>
+        </MantineProvider>
       </body>
     </html>
   );
