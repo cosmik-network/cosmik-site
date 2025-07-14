@@ -4,8 +4,9 @@ import { ActionIcon, Button, createTheme } from "@mantine/core";
 
 export const theme = createTheme({
   primaryColor: "gray",
-    fontFamily:
+  fontFamily:
     "Archivo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+  defaultRadius: "md",
   components: {
     Button: Button.extend({
       defaultProps: {

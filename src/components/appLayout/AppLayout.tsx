@@ -8,6 +8,8 @@ import {
   Button,
   Group,
   Image,
+  Menu,
+  Stack,
   Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -40,16 +42,50 @@ export default function AppLayout(props: Props) {
             <Image src={"/logo-full.svg"} alt="Cosmik logo" w={144} h={46} />
           </Anchor>
           <Group justify="spce-between" visibleFrom="xs">
-            <Anchor href="/vision" fw={500}>
+            <Button
+              component="a"
+              href="/vision"
+              variant="transparent"
+              size="md"
+              px={0}
+            >
               Our Vision
-            </Anchor>
-            <Anchor
+            </Button>
+            <Menu withArrow shadow="md">
+              <Menu.Target>
+                <Button variant="transparent" size="md" px={0}>
+                  Projects
+                </Button>
+              </Menu.Target>
+              <Menu.Dropdown>
+                <Menu.Item>
+                  <Group gap={"xs"}>
+                    <Image
+                      src={"/images/hyperfeed-logo.png"}
+                      alt="Hyperfeed logo"
+                      w={40}
+                      h={40}
+                    />
+                    <Stack gap={0}>
+                      <Text fw={500}>Hyperfeed</Text>
+                      <Text c={"gray"} fz={"sm"}>
+                        Next-Generation Research Discovery.
+                      </Text>
+                    </Stack>
+                  </Group>
+                </Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
+            <Button
+              component="a"
               href="https://paragraph.com/@sense-nets"
               target="_blank"
-              fw={500}
+              variant="transparent"
+              size="md"
+              px={0}
             >
               Blog
-            </Anchor>
+            </Button>
           </Group>
           <Button
             component="a"
@@ -72,16 +108,50 @@ export default function AppLayout(props: Props) {
       <AppShell.Navbar>
         <Group justify="space-between" px={"md"} py={"xs"}>
           <Group justify="spce-between">
-            <Anchor href="/vision" fw={500}>
+            <Button
+              component="a"
+              href="/vision"
+              variant="transparent"
+              size="md"
+              px={0}
+            >
               Our Vision
-            </Anchor>
-            <Anchor
+            </Button>
+            <Menu withArrow shadow="md">
+              <Menu.Target>
+                <Button variant="transparent" size="md" px={0}>
+                  Projects
+                </Button>
+              </Menu.Target>
+              <Menu.Dropdown>
+                <Menu.Item>
+                  <Group gap={"xs"}>
+                    <Image
+                      src={"/images/hyperfeed-logo.png"}
+                      alt="Hyperfeed logo"
+                      w={40}
+                      h={40}
+                    />
+                    <Stack gap={0}>
+                      <Text fw={500}>Hyperfeed</Text>
+                      <Text c={"gray"} fz={"sm"}>
+                        Next-Generation Research Discovery.
+                      </Text>
+                    </Stack>
+                  </Group>
+                </Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
+            <Button
+              component="a"
               href="https://paragraph.com/@sense-nets"
               target="_blank"
-              fw={500}
+              variant="transparent"
+              size="md"
+              px={0}
             >
               Blog
-            </Anchor>
+            </Button>
           </Group>
           <Button
             component="a"
