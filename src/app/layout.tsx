@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Archivo } from "next/font/google";
+import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import {
   ColorSchemeScript,
   mantineHtmlProps,
   MantineProvider,
 } from "@mantine/core";
 import "@mantine/core/styles.css";
-import AppLayout from "@/components/appLayout/AppLayout";
+import AppLayout from "@/components/navigation/appLayout/AppLayout";
 import { theme } from "@/styles/theme";
 
 export const metadata: Metadata = {
@@ -19,13 +19,22 @@ const archivo = Archivo({
   subsets: ["latin"],
 });
 
+const ibmPlexSans = IBM_Plex_Mono({
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={archivo.className} {...mantineHtmlProps}>
+    <html
+      lang="en"
+      className={`${archivo.className} ${ibmPlexSans.className}`}
+      {...mantineHtmlProps}
+    >
       <head>
         <ColorSchemeScript />
       </head>
