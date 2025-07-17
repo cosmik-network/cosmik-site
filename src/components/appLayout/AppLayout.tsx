@@ -3,7 +3,7 @@
 import {
   ActionIcon,
   Anchor,
-  AppShell,
+  AppShell,  
   Burger,
   Button,
   Group,
@@ -18,6 +18,7 @@ import {
   FaMastodon,
   FaSquareXTwitter,
   FaEnvelope,
+  FaGithub,
 } from "react-icons/fa6";
 
 interface Props {
@@ -42,15 +43,21 @@ export default function AppLayout(props: Props) {
             <Image src={"/logo-full.svg"} alt="Cosmik logo" w={144} h={46} />
           </Anchor>
           <Group justify="spce-between" visibleFrom="xs">
-            <Button
-              component="a"
-              href="/vision"
-              variant="transparent"
-              size="md"
-              px={0}
-            >
-              Our Vision
-            </Button>
+            <Menu withArrow shadow="md">
+              <Menu.Target>
+                <Button variant="transparent" size="md" px={0}>
+                  About
+                </Button>
+              </Menu.Target>
+              <Menu.Dropdown>
+                <Menu.Item>
+                  <Text fw={500}>Team</Text>
+                </Menu.Item>
+                <Menu.Item>
+                  <Text fw={500}>Vision</Text>
+                </Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
             <Menu withArrow shadow="md">
               <Menu.Target>
                 <Button variant="transparent" size="md" px={0}>
@@ -67,7 +74,9 @@ export default function AppLayout(props: Props) {
                       h={40}
                     />
                     <Stack gap={0}>
-                      <Text fw={500}>Hyperfeed</Text>
+                      <Group justify="space-between">
+                        <Text fw={500}>Hyperfeed</Text>
+                      </Group>
                       <Text c={"gray"} fz={"sm"}>
                         Next-Generation Research Discovery.
                       </Text>
@@ -85,6 +94,16 @@ export default function AppLayout(props: Props) {
               px={0}
             >
               Blog
+            </Button>
+            <Button
+              component="a"
+              href="/contact"
+              target="_blank"
+              variant="transparent"
+              size="md"
+              px={0}
+            >
+              Contact
             </Button>
           </Group>
           <Button
@@ -108,15 +127,21 @@ export default function AppLayout(props: Props) {
       <AppShell.Navbar>
         <Group justify="space-between" px={"md"} py={"xs"}>
           <Group justify="spce-between">
-            <Button
-              component="a"
-              href="/vision"
-              variant="transparent"
-              size="md"
-              px={0}
-            >
-              Our Vision
-            </Button>
+            <Menu withArrow shadow="md">
+              <Menu.Target>
+                <Button variant="transparent" size="md" px={0}>
+                  About
+                </Button>
+              </Menu.Target>
+              <Menu.Dropdown>
+                <Menu.Item>
+                  <Text fw={500}>Team</Text>
+                </Menu.Item>
+                <Menu.Item>
+                  <Text fw={500}>Vision</Text>
+                </Menu.Item>
+              </Menu.Dropdown>
+            </Menu>
             <Menu withArrow shadow="md">
               <Menu.Target>
                 <Button variant="transparent" size="md" px={0}>
@@ -151,6 +176,16 @@ export default function AppLayout(props: Props) {
               px={0}
             >
               Blog
+            </Button>
+            <Button
+              component="a"
+              href="/contact"
+              target="_blank"
+              variant="transparent"
+              size="md"
+              px={0}
+            >
+              Contact
             </Button>
           </Group>
           <Button
@@ -206,6 +241,15 @@ export default function AppLayout(props: Props) {
               size={"xl"}
             >
               <FaSquareXTwitter size={24} />
+            </ActionIcon>
+            <ActionIcon
+              component="a"
+              href="https://github.com/cosmik-network"
+              target="_blank"
+              variant="subtle"
+              size={"xl"}
+            >
+              <FaGithub size={24} />
             </ActionIcon>
           </Group>
         </Group>
