@@ -40,7 +40,7 @@ export default function Page() {
           <Title order={2} ta={"center"}>
             Team
           </Title>
-          <SimpleGrid cols={{ base: 1, xs: 2, sm: 4 }} spacing={"xl"}>
+          <SimpleGrid cols={{ base: 1, xs: 2, sm: 4 }} spacing={{ base: "xl", sm: "xs"  }}>
             <Stack align="center" gap={"xs"}>
               <Avatar
                 src={"/images/ronen.png"}
