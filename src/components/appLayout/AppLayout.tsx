@@ -3,7 +3,7 @@
 import {
   ActionIcon,
   Anchor,
-  AppShell,  
+  AppShell,
   Burger,
   Button,
   Group,
