@@ -38,7 +38,7 @@ export default function AppLayout(props: Props) {
       header={{ height: { base: 60 } }}
       navbar={{
         width: 300,
-        breakpoint: "xs",
+        breakpoint: "sm",
         collapsed: { desktop: true, mobile: !opened },
       }}
     >
@@ -47,7 +47,7 @@ export default function AppLayout(props: Props) {
           <Anchor href="/">
             <Image src={"/logo-full.svg"} alt="Cosmik logo" w={144} h={46} />
           </Anchor>
-          <Group justify="spce-between" visibleFrom="xs">
+          <Group justify="spce-between" visibleFrom="sm">
             <Menu withArrow shadow="md">
               <Menu.Target>
                 <Button variant="transparent" size="md" px={0}>
@@ -115,14 +115,14 @@ export default function AppLayout(props: Props) {
             component="a"
             href="https://tally.so/r/nGd4Ap"
             target="_blank"
-            visibleFrom="xs"
+            visibleFrom="sm"
           >
             Join our waitlist
           </Button>
           <Burger
             opened={opened}
             onClick={toggle}
-            hiddenFrom="xs"
+            hiddenFrom="sm"
             size="sm"
             color="gray"
           />
