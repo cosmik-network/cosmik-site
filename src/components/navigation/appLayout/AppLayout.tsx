@@ -42,7 +42,7 @@ export default function AppLayout(props: Props) {
         collapsed: { desktop: true, mobile: !opened },
       }}
     >
-      <AppShell.Header withBorder={false} pos={"relative"}>
+      <AppShell.Header withBorder={false}>
         <Group justify="space-between" px={"md"} py={"xs"}>
           <Anchor href="/">
             <Image src={"/logo-full.svg"} alt="Cosmik logo" w={144} h={46} />
@@ -130,8 +130,8 @@ export default function AppLayout(props: Props) {
       </AppShell.Header>
 
       <AppShell.Navbar>
-        <Group justify="space-between" px={"md"} py={"xs"}>
-          <Group justify="spce-between">
+        <Stack justify="space-between" align="center" px={"md"} py={"xs"}>
+          <Stack align="center">
             <Menu withArrow shadow="md">
               <Menu.Target>
                 <Button variant="transparent" size="md" px={0}>
@@ -192,7 +192,7 @@ export default function AppLayout(props: Props) {
             >
               Contact
             </Button>
-          </Group>
+          </Stack>
           <Button
             component="a"
             href="https://tally.so/r/nGd4Ap"
@@ -200,7 +200,7 @@ export default function AppLayout(props: Props) {
           >
             Join our waitlist
           </Button>
-        </Group>
+        </Stack>
       </AppShell.Navbar>
 
       <AppShell.Main>{props.children}</AppShell.Main>
