@@ -6,9 +6,13 @@ import {
   AppShell,
   Burger,
   Button,
+  Divider,
+  Grid,
+  GridCol,
   Group,
   Image,
   Menu,
+  Space,
   Stack,
   Text,
 } from "@mantine/core";
@@ -19,6 +23,7 @@ import {
   FaSquareXTwitter,
   FaEnvelope,
   FaGithub,
+  FaDiscord,
 } from "react-icons/fa6";
 
 interface Props {
@@ -30,14 +35,14 @@ export default function AppLayout(props: Props) {
 
   return (
     <AppShell
-      header={{ height: 60 }}
+      header={{ height: { base: 50, xs: "auto" } }}
       navbar={{
         width: 300,
         breakpoint: "xs",
         collapsed: { desktop: true, mobile: !opened },
       }}
     >
-      <AppShell.Header withBorder={false}>
+      <AppShell.Header withBorder={false} pos={"relative"}>
         <Group justify="space-between" px={"md"} py={"xs"}>
           <Anchor href="/">
             <Image src={"/logo-full.svg"} alt="Cosmik logo" w={144} h={46} />
@@ -199,60 +204,85 @@ export default function AppLayout(props: Props) {
       </AppShell.Navbar>
 
       <AppShell.Main>{props.children}</AppShell.Main>
-      <AppShell.Footer withBorder={false} px={"md"} py={"xs"}>
-        <Group justify="space-between">
-          <Text c={"gray.6"} fw={600}>
-            © Cosmik {new Date().getFullYear()}
-          </Text>
-          <Button
-            component="a"
-            href="mailto:hello@cosmik.network"
-            variant="light"
-            leftSection={<FaEnvelope />}
-            size="md"
-          >
-            hello@cosmik.network
-          </Button>
-          <Group justify="space-between" gap="0">
-            <ActionIcon
+      <AppShell.Footer
+        withBorder={false}
+        px={"md"}
+        py={"xs"}
+        mt={"xl"}
+        pos={"relative"}
+      >
+        <Divider />
+        <Space h={"xs"} />
+        <Grid justify="space-between" align="center" gutter={"md"}>
+          <GridCol span={{ base: "content", sm: "auto" }} mx={"auto"}>
+            <Group gap={"xs"}>
+              <Image src={"/logo.svg"} alt="Cosmik logo" w={28} />
+              <Text c={"gray.6"} fw={600}>
+                © Cosmik {new Date().getFullYear()}
+              </Text>
+            </Group>
+          </GridCol>
+          <GridCol span={{ base: "content", sm: "auto" }} mx={"auto"}>
+            <Button
               component="a"
-              href="https://bsky.app/profile/cosmik.network"
-              target="_blank"
-              variant="subtle"
-              size={"xl"}
-              m={0}
+              href="mailto:hello@cosmik.network"
+              variant="light"
+              leftSection={<FaEnvelope />}
             >
-              <FaBluesky size={24} />
-            </ActionIcon>
-            <ActionIcon
-              component="a"
-              href="https://mastodon.social/@cosmik_network"
-              target="_blank"
-              variant="subtle"
-              size={"xl"}
-            >
-              <FaMastodon size={24} />
-            </ActionIcon>
-            <ActionIcon
-              component="a"
-              href="https://x.com/CosmikNetwork"
-              target="_blank"
-              variant="subtle"
-              size={"xl"}
-            >
-              <FaSquareXTwitter size={24} />
-            </ActionIcon>
-            <ActionIcon
-              component="a"
-              href="https://github.com/cosmik-network"
-              target="_blank"
-              variant="subtle"
-              size={"xl"}
-            >
-              <FaGithub size={24} />
-            </ActionIcon>
-          </Group>
-        </Group>
+              hello@cosmik.network
+            </Button>
+          </GridCol>
+          <GridCol span={{ base: "content", sm: "content" }} mx={"auto"}>
+            <Group justify="space-between" gap="0">
+              <ActionIcon
+                component="a"
+                href="https://bsky.app/profile/cosmik.network"
+                target="_blank"
+                variant="subtle"
+                size={"xl"}
+                m={0}
+              >
+                <FaBluesky size={22} />
+              </ActionIcon>
+              <ActionIcon
+                component="a"
+                href="https://mastodon.social/@cosmik_network"
+                target="_blank"
+                variant="subtle"
+                size={"xl"}
+              >
+                <FaMastodon size={22} />
+              </ActionIcon>
+              <ActionIcon
+                component="a"
+                href="https://x.com/CosmikNetwork"
+                target="_blank"
+                variant="subtle"
+                size={"xl"}
+              >
+                <FaSquareXTwitter size={22} />
+              </ActionIcon>
+              <ActionIcon
+                component="a"
+                href="https://github.com/cosmik-network"
+                target="_blank"
+                variant="subtle"
+                size={"xl"}
+              >
+                <FaGithub size={22} />
+              </ActionIcon>
+              <ActionIcon
+                component="a"
+                href=""
+                target="_blank"
+                variant="subtle"
+                size={"xl"}
+              >
+                <FaDiscord size={22} />
+              </ActionIcon>
+            </Group>
+          </GridCol>
+        </Grid>
       </AppShell.Footer>
     </AppShell>
   );
