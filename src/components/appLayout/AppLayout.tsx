@@ -35,7 +35,7 @@ export default function AppLayout(props: Props) {
 
   return (
     <AppShell
-      header={{ height: { base: 50, xs: "auto" } }}
+      header={{ height: { base: 60 } }}
       navbar={{
         width: 300,
         breakpoint: "xs",

@@ -40,10 +40,7 @@ export default function Page() {
             <Avatar size={"xl"}></Avatar>
             <Stack align="center" gap={0} ta={"center"}>
               <Text fw={600}>Pouria Delfanazari</Text>
-              <Text c={"gray"}>
-                A short bio that provides context A short bio that provides
-                context
-              </Text>
+              <Text c={"gray"}>A short bio that provides context</Text>
             </Stack>
           </Stack>
         </SimpleGrid>
