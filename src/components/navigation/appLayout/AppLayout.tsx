@@ -203,7 +203,7 @@ export default function AppLayout(props: Props) {
         </Stack>
       </AppShell.Navbar>
 
-      <AppShell.Main>{props.children}</AppShell.Main>
+      <AppShell.Main mt={"xl"}>{props.children}</AppShell.Main>
       <AppShell.Footer
         withBorder={false}
         px={"md"}
