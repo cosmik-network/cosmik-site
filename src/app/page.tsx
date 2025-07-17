@@ -9,7 +9,7 @@ import {
   Title,
 } from "@mantine/core";
 
-export default function Page() {
+export default function Page() {  
   return (
     <Container>
       <Stack gap={100}>
