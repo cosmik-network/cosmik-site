@@ -1,1 +1,1 @@
-This is a tagline. It's under *src/content/home/tagline.mdx*
+This is a tagline

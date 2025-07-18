@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/contentDisplay/projectCard/ProjectCard";
+import { getContents } from "@/lib/utils/markdown";
 import {
   Avatar,
   Container,
@@ -9,10 +10,17 @@ import {
   Title,
 } from "@mantine/core";
 
-export default function Page() {  
+export default function Page() {
+  const contents = getContents("home");
+  const tagline = contents.filter((item) => item.slug === "tagline")[0].content;
+  const bios = contents.filter((item) => item.slug === "pouria" || item.slug === "ronen" || item.slug === "shahar" || item.slug === "wesley");
+
   return (
     <Container>
       <Stack gap={100}>
+        <Stack>
+          <Title order={1} ta={"center"}>{tagline}</Title>
+        </Stack>
         <Stack>
           <Title order={2} ta={"center"}>
             Projects
@@ -52,7 +60,7 @@ export default function Page() {
               />
               <Stack align="center" gap={0} ta={"center"}>
                 <Text fw={600}>Ronen Tamari</Text>
-                <Text c={"gray"}>A short bio that provides context</Text>
+                <Text c={"gray"}>{bios.filter((item) => item.slug === "ronen")[0].content}</Text>
               </Stack>
             </Stack>
             <Stack align="center" gap={"xs"}>
@@ -63,7 +71,7 @@ export default function Page() {
               />
               <Stack align="center" gap={0} ta={"center"}>
                 <Text fw={600}>Shahar Oriel</Text>
-                <Text c={"gray"}>A short bio that provides context</Text>
+                <Text c={"gray"}>{bios.filter((item) => item.slug === "shahar")[0].content}</Text>
               </Stack>
             </Stack>
             <Stack align="center" gap={"xs"}>
@@ -74,7 +82,7 @@ export default function Page() {
               />
               <Stack align="center" gap={0} ta={"center"}>
                 <Text fw={600}>Wesley Finck</Text>
-                <Text c={"gray"}>A short bio that provides context</Text>
+                <Text c={"gray"}>{bios.filter((item) => item.slug === "wesley")[0].content}</Text>
               </Stack>
             </Stack>
             <Stack align="center" gap={"xs"}>
@@ -83,7 +91,7 @@ export default function Page() {
               </Avatar>
               <Stack align="center" gap={0} ta={"center"}>
                 <Text fw={600}>Pouria Delfanazari</Text>
-                <Text c={"gray"}>A short bio that provides context</Text>
+                <Text c={"gray"}>{bios.filter((item) => item.slug === "pouria")[0].content}</Text>
               </Stack>
             </Stack>
           </SimpleGrid>
