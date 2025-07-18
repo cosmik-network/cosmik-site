@@ -1,4 +1,5 @@
 import { Group, Anchor, Image, Menu, Button, Text, Stack, Burger } from "@mantine/core";
+import { IoChevronDown } from "react-icons/io5";
 
 interface Props {
   isOpened: boolean;
@@ -11,10 +12,10 @@ export default function Header(props: Props) {
       <Anchor href="/">
         <Image src={"/logo-full.svg"} alt="Cosmik logo" w={144} h={46} />
       </Anchor>
-      <Group justify="spce-between" visibleFrom="sm">
+      <Group justify="spce-between" gap={"xs"} visibleFrom="sm">
         <Menu withArrow shadow="md">
           <Menu.Target>
-            <Button variant="transparent" size="md" px={0}>
+            <Button variant="subtle" size="md" leftSection={<IoChevronDown />}>
               About
             </Button>
           </Menu.Target>
@@ -29,7 +30,7 @@ export default function Header(props: Props) {
         </Menu>
         <Menu withArrow shadow="md">
           <Menu.Target>
-            <Button variant="transparent" size="md" px={0}>
+            <Button variant="subtle" size="md" leftSection={<IoChevronDown />}>
               Projects
             </Button>
           </Menu.Target>
@@ -58,9 +59,8 @@ export default function Header(props: Props) {
           component="a"
           href="https://paragraph.com/@sense-nets"
           target="_blank"
-          variant="transparent"
+          variant="subtle"
           size="md"
-          px={0}
         >
           Blog
         </Button>
@@ -68,9 +68,9 @@ export default function Header(props: Props) {
           component="a"
           href="/contact"
           target="_blank"
-          variant="transparent"
+          variant="subtle"
           size="md"
-          px={0}
+
         >
           Contact
         </Button>

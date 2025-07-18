@@ -1,12 +1,13 @@
 import { Button, Menu, Stack, Text, Image, Group } from "@mantine/core";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 export default function Navbar() {
   return (
     <Stack justify="space-between" align="center" px={"md"} py={"xs"}>
-      <Stack align="center">
+      <Stack align="center" gap={"xs"}>
         <Menu withArrow shadow="md">
           <Menu.Target>
-            <Button variant="transparent" size="md" px={0}>
+            <Button variant="subtle" size="md" leftSection={<IoMdArrowDropdown />}>
               About
             </Button>
           </Menu.Target>
@@ -21,7 +22,7 @@ export default function Navbar() {
         </Menu>
         <Menu withArrow shadow="md">
           <Menu.Target>
-            <Button variant="transparent" size="md" px={0}>
+            <Button variant="subtle" size="md" leftSection={<IoMdArrowDropdown />}>
               Projects
             </Button>
           </Menu.Target>
@@ -48,9 +49,8 @@ export default function Navbar() {
           component="a"
           href="https://paragraph.com/@sense-nets"
           target="_blank"
-          variant="transparent"
+          variant="subtle"
           size="md"
-          px={0}
         >
           Blog
         </Button>
@@ -58,9 +58,8 @@ export default function Navbar() {
           component="a"
           href="/contact"
           target="_blank"
-          variant="transparent"
+          variant="subtle"
           size="md"
-          px={0}
         >
           Contact
         </Button>
@@ -69,6 +68,7 @@ export default function Navbar() {
         component="a"
         href="https://tally.so/r/nGd4Ap"
         target="_blank"
+        size="md"
       >
         Join our waitlist
       </Button>
