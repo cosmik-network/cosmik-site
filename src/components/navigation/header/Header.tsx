@@ -77,11 +77,10 @@ export default function Header(props: Props) {
       </Group>
       <Button
         component="a"
-        href="https://tally.so/r/nGd4Ap"
-        target="_blank"
+        href="#connect"        
         visibleFrom="sm"
       >
-        Join our waitlist
+        Connect with us
       </Button>
       <Burger
         opened={props.isOpened}

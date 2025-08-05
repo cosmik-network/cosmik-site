@@ -42,7 +42,7 @@ export default function Page() {
           <SupportersContainer />
         </Stack>
 
-        <Stack align="center">
+        <Stack align="center" id="connect">
           <Title order={2}>Connect</Title>
           <ConnectContainer />
         </Stack>

@@ -66,11 +66,11 @@ export default function Navbar() {
       </Stack>
       <Button
         component="a"
-        href="https://tally.so/r/nGd4Ap"
+        href="#connect"
         target="_blank"
         size="md"
       >
-        Join our waitlist
+        Connect with us
       </Button>
     </Stack>
   )
