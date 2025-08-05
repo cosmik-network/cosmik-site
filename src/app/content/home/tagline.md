@@ -1,1 +1,1 @@
-Tools for collective sensemaking
+Building tools and networks for collective sensemaking

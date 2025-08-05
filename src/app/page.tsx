@@ -15,9 +15,10 @@ export default function Page() {
     <Container>
       <Stack gap={100}>
         <Stack>
-          <Title order={1} ta={"center"}>
-            {tagline}
-          </Title>
+          <Stack gap={0} align="center" ta={"center"}>
+            <Title order={1} fz={"3rem"}>Cosmik</Title>
+            <Title order={2} fw={600} maw={400}>{tagline}</Title>
+          </Stack>
           <Container size={"xs"}>
             <IntroContainer />
             <ValuesContainer />
