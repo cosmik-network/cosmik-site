@@ -17,11 +17,11 @@ const NoSSR = dynamic(
 
 export default function ConnectContainer() {
   return (
-    <Stack align="center">
-      <NoSSR />
+    <Stack align="center">      
       <Text>
         If you want to get involved in the project, we&apos;d love to connect!
       </Text>
+      <NoSSR />
       <SimpleGrid cols={{ base: 1, xs: 2, sm: 4 }} spacing={{ base: "sm" }}>
         <Card withBorder bg={"gray.1"} ta={"center"}>
           <Stack gap={"xs"}>
