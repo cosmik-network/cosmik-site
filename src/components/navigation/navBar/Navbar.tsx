@@ -1,7 +1,11 @@
 import { Button, Menu, Stack, Text, Image, Group } from "@mantine/core";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-export default function Navbar() {
+interface Props {
+  onToggle: () => void;
+}
+
+export default function Navbar(props: Props) {
   return (
     <Stack justify="space-between" align="center" px={"md"} py={"xs"}>
       <Stack align="center" gap={"xs"}>
@@ -61,6 +65,15 @@ export default function Navbar() {
           size="md"
         >
           Blog
+        </Button>
+        <Button
+          component="a"
+          href="#contact"
+          variant="subtle"
+          size="md"
+          onClick={props.onToggle}
+        >
+          Contact
         </Button>
       </Stack>
       <Button

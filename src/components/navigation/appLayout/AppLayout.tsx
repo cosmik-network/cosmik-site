@@ -45,7 +45,7 @@ export default function AppLayout(props: Props) {
       </AppShell.Header>
 
       <AppShell.Navbar>
-        <Navbar />
+        <Navbar onToggle={toggle} />
       </AppShell.Navbar>
 
       <AppShell.Main mt={"xl"}>{props.children}</AppShell.Main>

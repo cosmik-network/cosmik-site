@@ -73,6 +73,9 @@ export default function Header(props: Props) {
         >
           Blog
         </Button>
+        <Button component="a" href="#contact" variant="subtle" size="md">
+          Contact
+        </Button>
       </Group>
       <Button
         visibleFrom="sm"
