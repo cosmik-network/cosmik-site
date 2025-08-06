@@ -5,12 +5,12 @@ export default function ProjectsContainer() {
   return (
     <Group justify="center" align="stretch">
       <ProjectCard
-        name="Annos"
+        name="Semble"
         description="Social bookmarking for intentional browsing."
-        logo="/images/annos-logo.png"
+        logo="/images/semble-logo.png"
         year={2025}
         status="ongoing"
-        githubLink=""
+        githubLink="https://github.com/cosmik-network/semble"
       />
       <ProjectCard
         name="Hyperfeed"
@@ -18,7 +18,7 @@ export default function ProjectsContainer() {
         logo="/images/hyperfeed-logo.png"
         year={2024}
         status="archived"
-        githubLink=""
+        githubLink="https://github.com/Common-SenseMakers/sensemakers"
       />
     </Group>
   );
