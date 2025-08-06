@@ -1,4 +1,13 @@
-import { Group, Anchor, Image, Menu, Button, Text, Stack, Burger } from "@mantine/core";
+import {
+  Group,
+  Anchor,
+  Image,
+  Menu,
+  Button,
+  Text,
+  Stack,
+  Burger,
+} from "@mantine/core";
 import { IoChevronDown } from "react-icons/io5";
 
 interface Props {
@@ -20,10 +29,10 @@ export default function Header(props: Props) {
             </Button>
           </Menu.Target>
           <Menu.Dropdown>
-            <Menu.Item>
+            <Menu.Item component="a" href="/people">
               <Text fw={500}>People</Text>
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item component="a" href="/vision">
               <Text fw={500}>Vision</Text>
             </Menu.Item>
           </Menu.Dropdown>
@@ -70,16 +79,11 @@ export default function Header(props: Props) {
           target="_blank"
           variant="subtle"
           size="md"
-
         >
           Contact
         </Button>
       </Group>
-      <Button
-        component="a"
-        href="#connect"        
-        visibleFrom="sm"
-      >
+      <Button component="a" href="#connect" visibleFrom="sm">
         Connect with us
       </Button>
       <Burger
@@ -90,5 +94,5 @@ export default function Header(props: Props) {
         color="gray"
       />
     </Group>
-  )
+  );
 }

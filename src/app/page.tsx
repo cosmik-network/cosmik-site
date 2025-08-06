@@ -2,7 +2,6 @@ import ConnectContainer from "@/containers/connectCotnainer/ConnectContainer";
 import IntroContainer from "@/containers/introContainer/InroContainer";
 import ProjectsContainer from "@/containers/projectsContainer/ProjectsContainer";
 import SupportersContainer from "@/containers/supportersContainer/SupportersContainer";
-import TeamContainer from "@/containers/teamContainer/TeamContainer";
 import ValuesContainer from "@/containers/valuesContainer/ValuesContainer";
 import { getContents } from "@/lib/utils/markdown";
 import { Container, Stack, Title } from "@mantine/core";
@@ -16,8 +15,12 @@ export default function Page() {
       <Stack gap={100}>
         <Stack>
           <Stack gap={0} align="center" ta={"center"}>
-            <Title order={1} fz={"3rem"}>Cosmik</Title>
-            <Title order={2} fw={600} maw={400}>{tagline}</Title>
+            <Title order={1} fz={"3rem"}>
+              Cosmik
+            </Title>
+            <Title order={2} fw={500} maw={400}>
+              {tagline}
+            </Title>
           </Stack>
           <Container size={"xs"}>
             <IntroContainer />
@@ -28,13 +31,6 @@ export default function Page() {
         <Stack id="projects" align="center">
           <Title order={2}>Projects</Title>
           <ProjectsContainer />
-        </Stack>
-
-        <Stack align="center">
-          <Title order={2}>Team</Title>
-          <Container size={"sm"}>
-            <TeamContainer />
-          </Container>
         </Stack>
 
         <Stack align="center">

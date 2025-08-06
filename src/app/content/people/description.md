@@ -1,0 +1,1 @@
+Cosmik is a product-driven R&D lab working at the intersection of social networking protocols, AI and next-generation collaborative research tools.
