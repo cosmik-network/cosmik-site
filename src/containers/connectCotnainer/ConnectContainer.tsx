@@ -1,4 +1,11 @@
-import { Anchor, Card, SimpleGrid, Stack, Text } from "@mantine/core";
+import {
+  Anchor,
+  Card,
+  SimpleGrid,
+  Stack,
+  Text,
+  UnstyledButton,
+} from "@mantine/core";
 
 export default function ConnectContainer() {
   return (
@@ -12,9 +19,16 @@ export default function ConnectContainer() {
             <Text fw={600}>Waitlist</Text>
             <Text my={"auto"}>
               Join the{" "}
-              <Anchor href="" c={"gray"} fw={600}>
+              <UnstyledButton
+                component="span"
+                data-tally-open="31a9Ng"
+                data-tally-hide-title="1"
+                data-tally-emoji-animation="none"
+                c={"gray"}
+                fw={600}
+              >
                 waiting list
-              </Anchor>{" "}
+              </UnstyledButton>{" "}
               for early access and major updates
             </Text>
           </Stack>
