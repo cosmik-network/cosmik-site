@@ -7,22 +7,30 @@ export default function Navbar() {
       <Stack align="center" gap={"xs"}>
         <Menu withArrow shadow="md">
           <Menu.Target>
-            <Button variant="subtle" size="md" leftSection={<IoMdArrowDropdown />}>
+            <Button
+              variant="subtle"
+              size="md"
+              leftSection={<IoMdArrowDropdown />}
+            >
               About
             </Button>
           </Menu.Target>
           <Menu.Dropdown>
-            <Menu.Item>
+            <Menu.Item component="a" href="/people">
               <Text fw={500}>People</Text>
             </Menu.Item>
-            <Menu.Item>
+            <Menu.Item component="a" href="/vision">
               <Text fw={500}>Vision</Text>
             </Menu.Item>
           </Menu.Dropdown>
         </Menu>
         <Menu withArrow shadow="md">
           <Menu.Target>
-            <Button variant="subtle" size="md" leftSection={<IoMdArrowDropdown />}>
+            <Button
+              variant="subtle"
+              size="md"
+              leftSection={<IoMdArrowDropdown />}
+            >
               Projects
             </Button>
           </Menu.Target>
@@ -64,14 +72,9 @@ export default function Navbar() {
           Contact
         </Button>
       </Stack>
-      <Button
-        component="a"
-        href="#connect"
-        target="_blank"
-        size="md"
-      >
+      <Button component="a" href="#connect" target="_blank" size="md">
         Connect with us
       </Button>
     </Stack>
-  )
+  );
 }
