@@ -21,7 +21,7 @@ export default function Header(props: Props) {
           </Menu.Target>
           <Menu.Dropdown>
             <Menu.Item>
-              <Text fw={500}>Team</Text>
+              <Text fw={500}>People</Text>
             </Menu.Item>
             <Menu.Item>
               <Text fw={500}>Vision</Text>
