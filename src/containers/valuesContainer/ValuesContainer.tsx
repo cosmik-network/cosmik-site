@@ -19,15 +19,18 @@ export default function ValuesContainer() {
         <AccordionPanel>
           <Text>
             We’re working towards{" "}
-            <Anchor href="https://www.shishyko.com/essays/public-systems-of-science.html" fw={600}>
-              unpacking the research
+            <Anchor
+              href="https://www.shishyko.com/essays/public-systems-of-science.html"
+              fw={600}
+            >
+              unpacking the research process
             </Anchor>{" "}
-            process into smaller, composable and connected units that enable
-            large-scale open collaboration. These include hypotheses,
-            observations, connections, and reviews that all merit recognition.
-            Like open source software that thrives on modular contributions,
-            we&apos;re creating infrastructure where every insight, from any
-            contributor, can find its place in the collective knowledge graph.
+            into smaller, composable and connected units that enable large-scale
+            open collaboration. These include hypotheses, observations,
+            connections, and reviews that all merit recognition. Like open
+            source software that thrives on modular contributions, we&apos;re
+            creating infrastructure where every insight, from any contributor,
+            can find its place in the collective knowledge graph.
           </Text>
         </AccordionPanel>
       </AccordionItem>
