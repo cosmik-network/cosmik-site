@@ -1,1 +1,1 @@
-Shahar's bio, under content/home
+Co-founder & Chief Product Officer

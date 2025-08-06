@@ -1,1 +1,1 @@
-Wesley's bio, under content/home
+Co-founder & CTO

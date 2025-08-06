@@ -1,1 +1,1 @@
-Pouria's bio, under content/home
+Frontend Developer
