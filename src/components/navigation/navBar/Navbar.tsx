@@ -65,16 +65,7 @@ export default function Navbar(props: Props) {
           size="md"
         >
           Blog
-        </Button>
-        <Button
-          component="a"
-          href="#contact"
-          variant="subtle"
-          size="md"
-          onClick={props.onToggle}
-        >
-          Contact
-        </Button>
+        </Button>   
       </Stack>
       <Button
         size="md"
