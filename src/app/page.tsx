@@ -12,8 +12,6 @@ export default function Page() {
 
   return (
     <Container>
-      <script async src="https://tally.so/widgets/embed.js" />
-
       <Stack gap={100}>
         <Stack>
           <Stack gap={0} align="center" ta={"center"}>

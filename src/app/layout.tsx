@@ -37,6 +37,7 @@ export default function RootLayout({
     >
       <head>
         <ColorSchemeScript />
+        <script async src="https://tally.so/widgets/embed.js" />
       </head>
       <body>
         <MantineProvider theme={theme}>
