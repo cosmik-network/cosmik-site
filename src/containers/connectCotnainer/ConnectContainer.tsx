@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Anchor,
   Card,
@@ -6,10 +8,15 @@ import {
   Text,
   UnstyledButton,
 } from "@mantine/core";
+import dynamic from "next/dynamic";
+
+const NoSSR = dynamic(() => import("../../components/forms/waitlistForm/WaitlistForm"), { ssr: false });
+
 
 export default function ConnectContainer() {
   return (
-    <Stack align="center">
+    <Stack align="center">    
+    <NoSSR />
       <Text>
         If you want to get involved in the project, we&apos;d love to connect!
       </Text>
