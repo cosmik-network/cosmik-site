@@ -23,8 +23,10 @@ export default function Page() {
             </Title>
           </Stack>
           <Container size={"xs"} px={0}>
-            <IntroContainer />
-            <ValuesContainer />
+            <Stack>
+              <IntroContainer />
+              <ValuesContainer />
+            </Stack>
           </Container>
         </Stack>
 
