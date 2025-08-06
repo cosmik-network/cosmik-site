@@ -9,8 +9,16 @@ const components: MDXComponents = {
     </Title>
   ),
   p: ({ children }) => <Text>{children}</Text>,
-  ul: ({ children }) => <List type="unordered">{children}</List>,
-  ol: ({ children }) => <List type="unordered">{children}</List>,
+  ul: ({ children }) => (
+    <List maw={"96%"} type="unordered">
+      {children}
+    </List>
+  ),
+  ol: ({ children }) => (
+    <List maw={"96%"} type="ordered">
+      {children}
+    </List>
+  ),
   li: ({ children }) => <ListItem>{children}</ListItem>,
 };
 

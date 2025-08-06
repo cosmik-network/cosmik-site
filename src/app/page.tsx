@@ -22,7 +22,7 @@ export default function Page() {
               {tagline}
             </Title>
           </Stack>
-          <Container size={"xs"}>
+          <Container size={"xs"} px={0}>
             <IntroContainer />
             <ValuesContainer />
           </Container>
