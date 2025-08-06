@@ -72,10 +72,15 @@ export default function Header(props: Props) {
           size="md"
         >
           Blog
-        </Button>       
+        </Button>
       </Group>
-      <Button component="a" href="#connect" visibleFrom="sm">
-        Connect with us
+      <Button
+        visibleFrom="sm"
+        data-tally-open="31a9Ng"
+        data-tally-hide-title="1"
+        data-tally-emoji-animation="none"
+      >
+        Join waitlist
       </Button>
       <Burger
         opened={props.isOpened}

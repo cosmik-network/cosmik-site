@@ -62,10 +62,14 @@ export default function Navbar() {
         >
           Blog
         </Button>
-      
       </Stack>
-      <Button component="a" href="#connect" target="_blank" size="md">
-        Connect with us
+      <Button
+        size="md"
+        data-tally-open="31a9Ng"
+        data-tally-hide-title="1"
+        data-tally-emoji-animation="none"
+      >
+        Join waitlist
       </Button>
     </Stack>
   );
