@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Anchor,
@@ -10,13 +10,15 @@ import {
 } from "@mantine/core";
 import dynamic from "next/dynamic";
 
-const NoSSR = dynamic(() => import("../../components/forms/waitlistForm/WaitlistForm"), { ssr: false });
-
+const NoSSR = dynamic(
+  () => import("../../components/forms/waitlistForm/WaitlistForm"),
+  { ssr: false }
+);
 
 export default function ConnectContainer() {
   return (
-    <Stack align="center">    
-    <NoSSR />
+    <Stack align="center">
+      <NoSSR />
       <Text>
         If you want to get involved in the project, we&apos;d love to connect!
       </Text>
@@ -45,11 +47,21 @@ export default function ConnectContainer() {
             <Text fw={600}>Contribute</Text>
             <Text>
               Join the{" "}
-              <Anchor href="" c={"#5865f2"} fw={600}>
+              <Anchor
+                href="https://discord.gg/SHvvysb73e"
+                target="_blank"
+                c={"#5865f2"}
+                fw={600}
+              >
                 Cosmik Discord
               </Anchor>{" "}
               or check out our{" "}
-              <Anchor href="" c={"#25292F"} fw={600}>
+              <Anchor
+                href="https://github.com/cosmik-network"
+                target="_blank"
+                c={"#25292F"}
+                fw={600}
+              >
                 Github
               </Anchor>
             </Text>

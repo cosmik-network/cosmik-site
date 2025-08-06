@@ -118,7 +118,7 @@ export default function AppLayout(props: Props) {
               </ActionIcon>
               <ActionIcon
                 component="a"
-                href=""
+                href="https://discord.gg/SHvvysb73e"
                 target="_blank"
                 variant="subtle"
                 size={"xl"}
