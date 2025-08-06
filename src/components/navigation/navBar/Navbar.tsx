@@ -62,15 +62,7 @@ export default function Navbar() {
         >
           Blog
         </Button>
-        <Button
-          component="a"
-          href="/contact"
-          target="_blank"
-          variant="subtle"
-          size="md"
-        >
-          Contact
-        </Button>
+      
       </Stack>
       <Button component="a" href="#connect" target="_blank" size="md">
         Connect with us
