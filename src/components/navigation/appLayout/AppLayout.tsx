@@ -25,6 +25,7 @@ import {
   FaGithub,
   FaDiscord,
 } from "react-icons/fa6";
+import { track } from "@vercel/analytics";
 
 interface Props {
   children: React.ReactNode;
@@ -32,6 +33,10 @@ interface Props {
 
 export default function AppLayout(props: Props) {
   const [opened, { toggle }] = useDisclosure();
+
+  const handleWaitlistClick = () => {
+    track("Waitlist Signup");
+  };
 
   return (
     <AppShell
@@ -116,6 +121,7 @@ export default function AppLayout(props: Props) {
             href="https://tally.so/r/nGd4Ap"
             target="_blank"
             visibleFrom="xs"
+            onClick={handleWaitlistClick}
           >
             Join our waitlist
           </Button>
@@ -197,6 +203,7 @@ export default function AppLayout(props: Props) {
             component="a"
             href="https://tally.so/r/nGd4Ap"
             target="_blank"
+            onClick={handleWaitlistClick}
           >
             Join our waitlist
           </Button>
