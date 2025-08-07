@@ -8,6 +8,7 @@ import {
 import "@mantine/core/styles.css";
 import AppLayout from "@/components/navigation/appLayout/AppLayout";
 import { theme } from "@/styles/theme";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Cosmik",
@@ -42,6 +43,7 @@ export default function RootLayout({
         <MantineProvider theme={theme}>
           <AppLayout>{children}</AppLayout>
         </MantineProvider>
+        <Analytics />
       </body>
     </html>
   );
