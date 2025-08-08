@@ -3,14 +3,12 @@
 import {
   ActionIcon,
   AppShell,
-  Button,
-  Divider,
+  Button,  
   Grid,
   GridCol,
   Group,
   Image,
-  Overlay,
-  Space,
+  Overlay,  
   Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -55,7 +53,7 @@ export default function AppLayout(props: Props) {
         />
       </AppShell.Navbar>
 
-      <AppShell.Main mt={"xl"}>{props.children}</AppShell.Main>
+      <AppShell.Main my={{ base: 60, sm: 100 }}>{props.children}</AppShell.Main>
       <AppShell.Footer
         withBorder={false}
         px={"md"}
