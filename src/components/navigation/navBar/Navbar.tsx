@@ -70,7 +70,7 @@ export default function Navbar() {
               </Group>
             </Menu.Item>
             <Menu.Divider />
-            <Menu.Item>
+            <Menu.Item component="a" href="/hyperfeed">
               <Badge
                 variant="transparent"
                 leftSection={<FaCircle size={8} />}
