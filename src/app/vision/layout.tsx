@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Vision",
-  description: "Sensemaking for researchers",
+  description: "Tools and networks for collective sensemaking",
 };
 
 export default function Layout({
