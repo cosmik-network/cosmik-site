@@ -10,8 +10,8 @@ import {
 export default function ValuesContainer() {
   return (
     <Accordion variant="contained">
-      <AccordionItem value="1" bg="white">
-        <AccordionControl py={"xs"} bg="white">
+      <AccordionItem value="1" bg="transparent">
+        <AccordionControl py={"xs"} bg={"transparent"}>
           <Text fz={"lg"} fw={500}>
             Enabling a permaculture of modular research
           </Text>
@@ -35,13 +35,13 @@ export default function ValuesContainer() {
         </AccordionPanel>
       </AccordionItem>
 
-      <AccordionItem value="2" bg="white">
-        <AccordionControl py={"xs"}>
+      <AccordionItem value="2" bg="transparent">
+        <AccordionControl py={"xs"} bg={"transparent"}>
           <Text fz={"lg"} fw={500}>
             Networks that elicit and reward knowledge sharing
           </Text>
         </AccordionControl>
-        <AccordionPanel bg="white">
+        <AccordionPanel bg="transparent">
           <Text>
             New formats for publishing knowledge aren&apos;t enough - to make
             them worthwhile for researchers, we must <i>bring them to life</i>{" "}
@@ -53,13 +53,13 @@ export default function ValuesContainer() {
         </AccordionPanel>
       </AccordionItem>
 
-      <AccordionItem value="3" bg="white">
-        <AccordionControl py={"xs"}>
+      <AccordionItem value="3" bg="transparent">
+        <AccordionControl py={"xs"} bg={"transparent"}>
           <Text fz={"lg"} fw={500}>
             Built to stay open and interoperable
           </Text>
         </AccordionControl>
-        <AccordionPanel bg="white">
+        <AccordionPanel bg="transparent">
           <Text>
             Small insights can become powerful building blocks when they&apos;re
             structured for discovery, interoperability and reuse. We leverage AI
@@ -69,20 +69,20 @@ export default function ValuesContainer() {
         </AccordionPanel>
       </AccordionItem>
 
-      <AccordionItem value="4" bg="white">
-        <AccordionControl py={"xs"}>
+      <AccordionItem value="4" bg="transparent">
+        <AccordionControl py={"xs"} bg={"transparent"}>
           <Text fz={"lg"} fw={500}>
             Networks by researchers, for researchers
           </Text>
         </AccordionControl>
-        <AccordionPanel bg="white">
+        <AccordionPanel bg="transparent">
           <Text>
-            Aggregated at scale, modular research contributions translate into
-            value far greater than the sum of their parts. We leverage
-            decentralized networks like ATProto to maintain data accessibility
-            while keeping ownership in researchers&apos; hands. We&apos;re
-            creating a co-op model so researchers can help shape, guide, and
-            benefit from the ecosystem their contributions sustain.
+            {`Aggregated at scale, modular research contributions translate into value far
+            greater than the sum of their parts. Decentralized public networks
+            like ATProto enable maintaining data accessibility while keeping
+            ownership in researchers’ hands. We’re creating a co-op model so
+            researchers can help shape, guide, and benefit from the ecosystem
+            their contributions sustain.`}
           </Text>
         </AccordionPanel>
       </AccordionItem>

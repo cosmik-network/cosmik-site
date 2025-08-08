@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Anchor,
-  Card,
-  SimpleGrid,
-  Stack,
-  Text,
-  UnstyledButton,
-} from "@mantine/core";
+import { Anchor, Card, SimpleGrid, Stack, Text } from "@mantine/core";
 import dynamic from "next/dynamic";
 
 const NoSSR = dynamic(
@@ -17,15 +10,16 @@ const NoSSR = dynamic(
 
 export default function ConnectContainer() {
   return (
-    <Stack align="center">      
+    <Stack align="center">
       <Text>
         If you want to get involved in the project, we&apos;d love to connect!
       </Text>
-      <NoSSR />
       <SimpleGrid cols={{ base: 1, xs: 2, sm: 3 }} spacing={{ base: "sm" }}>
-        <Card withBorder bg={"gray.1"} ta={"center"}>
+        <Card withBorder ta={"center"}>
           <Stack gap={"xs"}>
-            <Text fw={600}>Contribute</Text>
+            <Text fw={600} fz={"lg"}>
+              Contribute
+            </Text>
             <Text>
               Join the{" "}
               <Anchor
@@ -48,21 +42,29 @@ export default function ConnectContainer() {
             </Text>
           </Stack>
         </Card>
-        <Card withBorder bg={"gray.1"} ta={"center"}>
+        <Card withBorder ta={"center"}>
           <Stack>
-            <Text fw={600}>Get involved</Text>
+            <Text fw={600} fz={"lg"}>
+              Get involved
+            </Text>
             <Text ta={"center"} my={"auto"}>
               Schedule a 1:1 with us and share more about yourself and your
               interests{" "}
-              <Anchor href="https://forms.cosmik.network/get-involved" target="_blank" fw={600}>
+              <Anchor
+                href="https://forms.cosmik.network/get-involved"
+                target="_blank"
+                fw={600}
+              >
                 here
               </Anchor>
             </Text>
           </Stack>
         </Card>
-        <Card withBorder bg={"gray.1"} ta={"center"}>
+        <Card withBorder ta={"center"}>
           <Stack gap={"xs"}>
-            <Text fw={600}>General inquiry</Text>
+            <Text fw={600} fz={"lg"}>
+              General inquiry
+            </Text>
 
             <Text ta={"center"} my={"auto"}>
               Drop us an email at{" "}
@@ -73,6 +75,7 @@ export default function ConnectContainer() {
           </Stack>
         </Card>
       </SimpleGrid>
+      <NoSSR />
     </Stack>
   );
 }

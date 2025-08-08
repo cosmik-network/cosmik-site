@@ -8,7 +8,7 @@ const components: MDXComponents = {
       {children}
     </Title>
   ),
-  p: ({ children }) => <Text>{children}</Text>,
+  p: ({ children }) => <Text fw={500}>{children}</Text>,
   ul: ({ children }) => (
     <List maw={"96%"} type="unordered">
       {children}
@@ -19,7 +19,7 @@ const components: MDXComponents = {
       {children}
     </List>
   ),
-  li: ({ children }) => <ListItem>{children}</ListItem>,
+  li: ({ children }) => <ListItem fw={500}>{children}</ListItem>,
 };
 
 export function useMDXComponents(): MDXComponents {

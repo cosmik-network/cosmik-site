@@ -3,7 +3,7 @@ import { Anchor, Group, Image, Stack, Text } from "@mantine/core";
 export default function SupportersContainer() {
   return (
     <Stack align="center">
-      <Group justify="center">
+      <Group justify="center" gap={"xl"}>
         <Anchor href="http://astera.org/" target="_blank">
           <Image
             src={"/images/astera.svg"}
