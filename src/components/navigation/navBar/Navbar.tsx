@@ -59,13 +59,13 @@ export default function Navbar(props: Props) {
         </Menu>
         <Button
           component="a"
-          href="https://paragraph.com/@sense-nets"
+          href="https://blog.cosmik.network"
           target="_blank"
           variant="subtle"
           size="md"
         >
           Blog
-        </Button>   
+        </Button>
       </Stack>
       <Button
         size="md"
