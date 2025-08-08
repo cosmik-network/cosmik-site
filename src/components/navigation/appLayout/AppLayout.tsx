@@ -3,12 +3,12 @@
 import {
   ActionIcon,
   AppShell,
-  Button,  
+  Button,
   Grid,
   GridCol,
   Group,
   Image,
-  Overlay,  
+  Overlay,
   Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";

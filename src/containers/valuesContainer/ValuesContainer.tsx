@@ -11,7 +11,7 @@ export default function ValuesContainer() {
   return (
     <Accordion variant="contained">
       <AccordionItem value="1" bg="transparent">
-        <AccordionControl py={"xs"}>
+        <AccordionControl py={"xs"} bg={"transparent"}>
           <Text fz={"lg"} fw={500}>
             Enabling a permaculture of modular research
           </Text>
@@ -36,7 +36,7 @@ export default function ValuesContainer() {
       </AccordionItem>
 
       <AccordionItem value="2" bg="transparent">
-        <AccordionControl py={"xs"}>
+        <AccordionControl py={"xs"} bg={"transparent"}>
           <Text fz={"lg"} fw={500}>
             Networks that elicit and reward knowledge sharing
           </Text>
@@ -54,7 +54,7 @@ export default function ValuesContainer() {
       </AccordionItem>
 
       <AccordionItem value="3" bg="transparent">
-        <AccordionControl py={"xs"}>
+        <AccordionControl py={"xs"} bg={"transparent"}>
           <Text fz={"lg"} fw={500}>
             Built to stay open and interoperable
           </Text>
@@ -70,7 +70,7 @@ export default function ValuesContainer() {
       </AccordionItem>
 
       <AccordionItem value="4" bg="transparent">
-        <AccordionControl py={"xs"}>
+        <AccordionControl py={"xs"} bg={"transparent"}>
           <Text fz={"lg"} fw={500}>
             Networks by researchers, for researchers
           </Text>
