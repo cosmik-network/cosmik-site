@@ -60,7 +60,7 @@ export default function Navbar() {
         </Menu>
         <Button
           component="a"
-          href="https://paragraph.com/@sense-nets"
+          href="https://blog.cosmik.network"
           target="_blank"
           variant="subtle"
           size="md"
