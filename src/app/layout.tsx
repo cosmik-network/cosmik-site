@@ -12,8 +12,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Cosmik",
-  description:
-    "Cosmik builds tools that help you understand and organize research discussions across social media, powered by collective intelligence and semantic AI.",
+  description: "Tools and networks for collective sensemaking",
 };
 
 const archivo = Archivo({
