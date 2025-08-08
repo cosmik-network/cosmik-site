@@ -9,6 +9,7 @@ import {
   GridCol,
   Group,
   Image,
+  Overlay,
   Space,
   Text,
 } from "@mantine/core";
@@ -40,12 +41,18 @@ export default function AppLayout(props: Props) {
         collapsed: { desktop: true, mobile: !opened },
       }}
     >
-      <AppShell.Header withBorder={false}>
+      <AppShell.Header withBorder={false} bg={"transparent"}>
         <Header isOpened={opened} onToggle={toggle} />
       </AppShell.Header>
 
-      <AppShell.Navbar>
+      <AppShell.Navbar bg={"transparent"}>
         <Navbar />
+        <Overlay
+          color="#ffffff"
+          backgroundOpacity={0}
+          blur={4}
+          style={{ zIndex: -1 }}
+        />
       </AppShell.Navbar>
 
       <AppShell.Main mt={"xl"}>{props.children}</AppShell.Main>
@@ -62,9 +69,7 @@ export default function AppLayout(props: Props) {
           <GridCol span={{ base: "content", sm: "auto" }} mx={"auto"}>
             <Group gap={"xs"}>
               <Image src={"/logo.svg"} alt="Cosmik logo" w={28} />
-              <Text c={"gray.6"} fw={600}>
-                © Cosmik {new Date().getFullYear()}
-              </Text>
+              <Text fw={600}>© Cosmik {new Date().getFullYear()}</Text>
             </Group>
           </GridCol>
           <GridCol span={{ base: "content", sm: "auto" }} mx={"auto"}>
@@ -72,6 +77,7 @@ export default function AppLayout(props: Props) {
               component="a"
               href="mailto:hello@cosmik.network"
               variant="light"
+              bg={"gray.1"}
               leftSection={<FaEnvelope />}
             >
               hello@cosmik.network
@@ -84,6 +90,7 @@ export default function AppLayout(props: Props) {
                 href="https://bsky.app/profile/cosmik.network"
                 target="_blank"
                 variant="subtle"
+                color="gray"
                 size={"xl"}
                 m={0}
               >
@@ -94,6 +101,7 @@ export default function AppLayout(props: Props) {
                 href="https://mastodon.social/@cosmik_network"
                 target="_blank"
                 variant="subtle"
+                color="gray"
                 size={"xl"}
               >
                 <FaMastodon size={22} />
@@ -103,6 +111,7 @@ export default function AppLayout(props: Props) {
                 href="https://x.com/CosmikNetwork"
                 target="_blank"
                 variant="subtle"
+                color="gray"
                 size={"xl"}
               >
                 <FaSquareXTwitter size={22} />
@@ -112,6 +121,7 @@ export default function AppLayout(props: Props) {
                 href="https://github.com/cosmik-network"
                 target="_blank"
                 variant="subtle"
+                color="gray"
                 size={"xl"}
               >
                 <FaGithub size={22} />
@@ -121,6 +131,7 @@ export default function AppLayout(props: Props) {
                 href="https://discord.gg/SHvvysb73e"
                 target="_blank"
                 variant="subtle"
+                color="gray"
                 size={"xl"}
               >
                 <FaDiscord size={22} />
