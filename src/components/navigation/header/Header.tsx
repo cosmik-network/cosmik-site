@@ -9,6 +9,7 @@ import {
   Burger,
 } from "@mantine/core";
 import { IoChevronDown } from "react-icons/io5";
+import { track } from "@vercel/analytics";
 
 interface Props {
   isOpened: boolean;
@@ -16,6 +17,10 @@ interface Props {
 }
 
 export default function Header(props: Props) {
+  const handleWaitlistClick = () => {
+    track("Waitlist Signup");
+  };
+
   return (
     <Group justify="space-between" px={"md"} py={"xs"}>
       <Anchor href="/">
@@ -72,13 +77,14 @@ export default function Header(props: Props) {
           size="md"
         >
           Blog
-        </Button>     
+        </Button>
       </Group>
       <Button
         visibleFrom="sm"
         data-tally-open="31a9Ng"
         data-tally-hide-title="1"
         data-tally-emoji-animation="none"
+        onClick={handleWaitlistClick}
       >
         Join waitlist
       </Button>

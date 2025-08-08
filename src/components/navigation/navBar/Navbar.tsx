@@ -1,11 +1,12 @@
 import { Button, Menu, Stack, Text, Image, Group } from "@mantine/core";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { track } from "@vercel/analytics";
 
-interface Props {
-  onToggle: () => void;
-}
+export default function Navbar() {
+  const handleWaitlistClick = () => {
+    track("Waitlist Signup");
+  };
 
-export default function Navbar(props: Props) {
   return (
     <Stack justify="space-between" align="center" px={"md"} py={"xs"}>
       <Stack align="center" gap={"xs"}>
@@ -65,13 +66,14 @@ export default function Navbar(props: Props) {
           size="md"
         >
           Blog
-        </Button>   
+        </Button>
       </Stack>
       <Button
         size="md"
         data-tally-open="31a9Ng"
         data-tally-hide-title="1"
         data-tally-emoji-animation="none"
+        onClick={handleWaitlistClick}
       >
         Join waitlist
       </Button>

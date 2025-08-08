@@ -22,26 +22,7 @@ export default function ConnectContainer() {
         If you want to get involved in the project, we&apos;d love to connect!
       </Text>
       <NoSSR />
-      <SimpleGrid cols={{ base: 1, xs: 2, sm: 4 }} spacing={{ base: "sm" }}>
-        <Card withBorder bg={"gray.1"} ta={"center"}>
-          <Stack gap={"xs"}>
-            <Text fw={600}>Waitlist</Text>
-            <Text my={"auto"}>
-              Join the{" "}
-              <UnstyledButton
-                component="span"
-                data-tally-open="31a9Ng"
-                data-tally-hide-title="1"
-                data-tally-emoji-animation="none"
-                c={"gray"}
-                fw={600}
-              >
-                waiting list
-              </UnstyledButton>{" "}
-              for early access and major updates
-            </Text>
-          </Stack>
-        </Card>
+      <SimpleGrid cols={{ base: 1, xs: 2, sm: 3 }} spacing={{ base: "sm" }}>
         <Card withBorder bg={"gray.1"} ta={"center"}>
           <Stack gap={"xs"}>
             <Text fw={600}>Contribute</Text>

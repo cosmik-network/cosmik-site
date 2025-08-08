@@ -2,16 +2,13 @@
 
 import {
   ActionIcon,
-  Anchor,
   AppShell,
-  Burger,
   Button,
   Divider,
   Grid,
   GridCol,
   Group,
   Image,
-  Menu,
   Space,
   Text,
 } from "@mantine/core";
@@ -24,7 +21,6 @@ import {
   FaGithub,
   FaDiscord,
 } from "react-icons/fa6";
-import { track } from "@vercel/analytics";
 import Navbar from "../navBar/Navbar";
 import Header from "../header/Header";
 
@@ -35,10 +31,6 @@ interface Props {
 export default function AppLayout(props: Props) {
   const [opened, { toggle }] = useDisclosure();
 
-  const handleWaitlistClick = () => {
-    track("Waitlist Signup");
-  };
-
   return (
     <AppShell
       header={{ height: { base: 60 } }}
@@ -48,167 +40,12 @@ export default function AppLayout(props: Props) {
         collapsed: { desktop: true, mobile: !opened },
       }}
     >
-      <AppShell.Header withBorder={false} pos={"relative"}>
-        <Group justify="space-between" px={"md"} py={"xs"}>
-          <Anchor href="/">
-            <Image src={"/logo-full.svg"} alt="Cosmik logo" w={144} h={46} />
-          </Anchor>
-          <Group justify="spce-between" visibleFrom="xs">
-            <Menu withArrow shadow="md">
-              <Menu.Target>
-                <Button variant="transparent" size="md" px={0}>
-                  About
-                </Button>
-              </Menu.Target>
-              <Menu.Dropdown>
-                <Menu.Item>
-                  <Text fw={500}>Team</Text>
-                </Menu.Item>
-                <Menu.Item>
-                  <Text fw={500}>Vision</Text>
-                </Menu.Item>
-              </Menu.Dropdown>
-            </Menu>
-            <Menu withArrow shadow="md">
-              <Menu.Target>
-                <Button variant="transparent" size="md" px={0}>
-                  Projects
-                </Button>
-              </Menu.Target>
-              <Menu.Dropdown>
-                <Menu.Item>
-                  <Group gap={"xs"}>
-                    <Image
-                      src={"/images/hyperfeed-logo.png"}
-                      alt="Hyperfeed logo"
-                      w={40}
-                      h={40}
-                    />
-                    <Stack gap={0}>
-                      <Group justify="space-between">
-                        <Text fw={500}>Hyperfeed</Text>
-                      </Group>
-                      <Text c={"gray"} fz={"sm"}>
-                        Next-Generation Research Discovery.
-                      </Text>
-                    </Stack>
-                  </Group>
-                </Menu.Item>
-              </Menu.Dropdown>
-            </Menu>
-            <Button
-              component="a"
-              href="https://paragraph.com/@sense-nets"
-              target="_blank"
-              variant="transparent"
-              size="md"
-              px={0}
-            >
-              Blog
-            </Button>
-            <Button
-              component="a"
-              href="/contact"
-              target="_blank"
-              variant="transparent"
-              size="md"
-              px={0}
-            >
-              Contact
-            </Button>
-          </Group>
-          <Button
-            component="a"
-            href="https://tally.so/r/nGd4Ap"
-            target="_blank"
-            visibleFrom="xs"
-            onClick={handleWaitlistClick}
-          >
-            Join our waitlist
-          </Button>
-          <Burger
-            opened={opened}
-            onClick={toggle}
-            hiddenFrom="xs"
-            size="sm"
-            color="gray"
-          />
-        </Group>
+      <AppShell.Header withBorder={false}>
+        <Header isOpened={opened} onToggle={toggle} />
       </AppShell.Header>
 
       <AppShell.Navbar>
-        <Group justify="space-between" px={"md"} py={"xs"}>
-          <Group justify="spce-between">
-            <Menu withArrow shadow="md">
-              <Menu.Target>
-                <Button variant="transparent" size="md" px={0}>
-                  About
-                </Button>
-              </Menu.Target>
-              <Menu.Dropdown>
-                <Menu.Item>
-                  <Text fw={500}>Team</Text>
-                </Menu.Item>
-                <Menu.Item>
-                  <Text fw={500}>Vision</Text>
-                </Menu.Item>
-              </Menu.Dropdown>
-            </Menu>
-            <Menu withArrow shadow="md">
-              <Menu.Target>
-                <Button variant="transparent" size="md" px={0}>
-                  Projects
-                </Button>
-              </Menu.Target>
-              <Menu.Dropdown>
-                <Menu.Item>
-                  <Group gap={"xs"}>
-                    <Image
-                      src={"/images/hyperfeed-logo.png"}
-                      alt="Hyperfeed logo"
-                      w={40}
-                      h={40}
-                    />
-                    <Stack gap={0}>
-                      <Text fw={500}>Hyperfeed</Text>
-                      <Text c={"gray"} fz={"sm"}>
-                        Next-Generation Research Discovery.
-                      </Text>
-                    </Stack>
-                  </Group>
-                </Menu.Item>
-              </Menu.Dropdown>
-            </Menu>
-            <Button
-              component="a"
-              href="https://paragraph.com/@sense-nets"
-              target="_blank"
-              variant="transparent"
-              size="md"
-              px={0}
-            >
-              Blog
-            </Button>
-            <Button
-              component="a"
-              href="/contact"
-              target="_blank"
-              variant="transparent"
-              size="md"
-              px={0}
-            >
-              Contact
-            </Button>
-          </Group>
-          <Button
-            component="a"
-            href="https://tally.so/r/nGd4Ap"
-            target="_blank"
-            onClick={handleWaitlistClick}
-          >
-            Join our waitlist
-          </Button>
-        </Group>
+        <Navbar />
       </AppShell.Navbar>
 
       <AppShell.Main mt={"xl"}>{props.children}</AppShell.Main>
