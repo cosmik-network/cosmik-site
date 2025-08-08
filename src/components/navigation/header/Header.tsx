@@ -62,7 +62,7 @@ export default function Header(props: Props) {
               </Button>
             </Menu.Target>
             <Menu.Dropdown>
-              <Menu.Item>
+              <Menu.Item component="a" href="https://semble.so/" target="_blank">
                 <Badge
                   variant="transparent"
                   leftSection={<FaCircle size={8} />}

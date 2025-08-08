@@ -1,6 +1,7 @@
 import {
-  ActionIcon,
-  Badge,  
+  Anchor,
+  Badge,
+  Button,
   Card,
   Group,
   Image,
@@ -8,6 +9,7 @@ import {
   Text,
 } from "@mantine/core";
 import { FaGithub, FaCircle } from "react-icons/fa6";
+import { useRouter } from "next/navigation";
 
 interface Props {
   name: string;
@@ -16,12 +18,16 @@ interface Props {
   year: number;
   status: "archived" | "ongoing";
   githubLink: string;
+  projectLink: string;
+  backgroundImage: string;
 }
 
 export default function ProjectCard(props: Props) {
+  const router = useRouter();
+
   return (
-    <Card withBorder bg={"gray.0.5"} w={300}>
-      <Stack>
+    <Card px={"md"} py={"xs"}>
+      <Group justify="space-between" gap={0}>
         <Group gap={"xs"}>
           {props.logo && (
             <Image
@@ -35,38 +41,50 @@ export default function ProjectCard(props: Props) {
             {props.name}
           </Text>
         </Group>
-        <Text c={"gray"} fw={500} maw={200}>
+        <Text c={"gray"} fw={500}>
           {props.description}
         </Text>
-        <Group justify="space-between" mt={100}>
-          <Stack gap={0}>
-            <Text c={"gray"} fz={"sm"} fw={500}>
-              {props.year}
-            </Text>
-            <Group>
-              <Badge
-                variant="transparent"
-                leftSection={<FaCircle size={8} />}
-                c={props.status === "archived" ? "red" : "green"}
-                px={0}
-              >
-                <Text ff={"monospace"} fz={"xs"} fw={600}>
-                  {props.status}
-                </Text>
-              </Badge>
-            </Group>
-          </Stack>
-          <ActionIcon
-            component="a"
-            href={props.githubLink}
-            target="_blank"
-            size="lg"
-            color={"gray.5"}
-          >
-            <FaGithub />
-          </ActionIcon>
-        </Group>
-      </Stack>
+      </Group>
+
+      <Anchor href={props.projectLink} target="_blank">
+        <Image
+          src={props.backgroundImage}
+          radius={"md"}
+          fit="contain"
+          maw={700}
+          my={"5"}
+        />
+      </Anchor>
+
+      <Group justify="space-between">
+        <Stack gap={0}>
+          <Text c={"gray"} fz={"sm"} fw={500}>
+            {props.year}
+          </Text>
+          <Group>
+            <Badge
+              variant="transparent"
+              leftSection={<FaCircle size={8} />}
+              c={props.status === "archived" ? "red" : "green"}
+              px={0}
+            >
+              <Text ff={"monospace"} fz={"xs"} fw={600}>
+                {props.status}
+              </Text>
+            </Badge>
+          </Group>
+        </Stack>
+        <Button
+          component="a"
+          href={props.githubLink}
+          target="_blank"
+          variant="light"
+          color="gray"
+          leftSection={<FaGithub />}
+        >
+          GitHub
+        </Button>
+      </Group>
     </Card>
   );
 }
