@@ -11,7 +11,7 @@ export default function ValuesContainer() {
   return (
     <Accordion variant="contained">
       <AccordionItem value="1" bg="white">
-        <AccordionControl py={"xs"} bg="white">
+        <AccordionControl py={"xs"}>
           <Text fz={"lg"} fw={500}>
             Enabling a permaculture of modular research
           </Text>
