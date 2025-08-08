@@ -9,9 +9,11 @@ import {
   Burger,
   Box,
   Overlay,
+  Badge,
 } from "@mantine/core";
 import { IoChevronDown } from "react-icons/io5";
 import { track } from "@vercel/analytics";
+import { FaCircle } from "react-icons/fa6";
 
 interface Props {
   isOpened: boolean;
@@ -61,7 +63,46 @@ export default function Header(props: Props) {
             </Menu.Target>
             <Menu.Dropdown>
               <Menu.Item>
-                <Group gap={"xs"}>
+                <Badge
+                  variant="transparent"
+                  leftSection={<FaCircle size={8} />}
+                  c={"green"}
+                  px={0}
+                >
+                  <Text ff={"monospace"} fz={"sm"} fw={600}>
+                    Ongoing
+                  </Text>
+                </Badge>
+                <Group gap={"xs"} mt={"xs"}>
+                  <Image
+                    src={"/images/hyperfeed-logo.png"}
+                    alt="Semble logo"
+                    w={40}
+                    h={40}
+                  />
+                  <Stack gap={0}>
+                    <Group justify="space-between">
+                      <Text fw={500}>Semble</Text>
+                    </Group>
+                    <Text c={"gray"} fz={"sm"}>
+                      A social knowledge tool for researchers
+                    </Text>
+                  </Stack>
+                </Group>
+              </Menu.Item>
+              <Menu.Divider />
+              <Menu.Item>
+                <Badge
+                  variant="transparent"
+                  leftSection={<FaCircle size={8} />}
+                  c={"red"}
+                  px={0}
+                >
+                  <Text ff={"monospace"} fz={"sm"} fw={600}>
+                    Archived
+                  </Text>
+                </Badge>
+                <Group gap={"xs"} mt={"xs"}>
                   <Image
                     src={"/images/hyperfeed-logo.png"}
                     alt="Hyperfeed logo"
@@ -69,11 +110,9 @@ export default function Header(props: Props) {
                     h={40}
                   />
                   <Stack gap={0}>
-                    <Group justify="space-between">
-                      <Text fw={500}>Hyperfeed</Text>
-                    </Group>
+                    <Text fw={500}>Hyperfeed</Text>
                     <Text c={"gray"} fz={"sm"}>
-                      Next-Generation Research Discovery.
+                      Next-Generation Research Discovery
                     </Text>
                   </Stack>
                 </Group>
@@ -103,7 +142,7 @@ export default function Header(props: Props) {
           opened={props.isOpened}
           onClick={props.onToggle}
           hiddenFrom="sm"
-          size="sm"          
+          size="sm"
         />
       </Group>
       <Overlay
