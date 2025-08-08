@@ -62,9 +62,8 @@ export default function AppLayout(props: Props) {
         py={"xs"}
         mt={"xl"}
         pos={"relative"}
+        bg={"transparent"}
       >
-        <Divider />
-        <Space h={"xs"} />
         <Grid justify="space-between" align="center" gutter={"md"}>
           <GridCol span={{ base: "content", sm: "auto" }} mx={"auto"}>
             <Group gap={"xs"}>
@@ -90,7 +89,7 @@ export default function AppLayout(props: Props) {
                 href="https://bsky.app/profile/cosmik.network"
                 target="_blank"
                 variant="subtle"
-                color="gray"
+                color="dark"
                 size={"xl"}
                 m={0}
               >
@@ -101,7 +100,7 @@ export default function AppLayout(props: Props) {
                 href="https://mastodon.social/@cosmik_network"
                 target="_blank"
                 variant="subtle"
-                color="gray"
+                color="dark"
                 size={"xl"}
               >
                 <FaMastodon size={22} />
@@ -111,7 +110,7 @@ export default function AppLayout(props: Props) {
                 href="https://x.com/CosmikNetwork"
                 target="_blank"
                 variant="subtle"
-                color="gray"
+                color="dark"
                 size={"xl"}
               >
                 <FaSquareXTwitter size={22} />
@@ -121,7 +120,7 @@ export default function AppLayout(props: Props) {
                 href="https://github.com/cosmik-network"
                 target="_blank"
                 variant="subtle"
-                color="gray"
+                color="grdarkay"
                 size={"xl"}
               >
                 <FaGithub size={22} />
@@ -131,7 +130,7 @@ export default function AppLayout(props: Props) {
                 href="https://discord.gg/SHvvysb73e"
                 target="_blank"
                 variant="subtle"
-                color="gray"
+                color="dark"
                 size={"xl"}
               >
                 <FaDiscord size={22} />
@@ -139,6 +138,12 @@ export default function AppLayout(props: Props) {
             </Group>
           </GridCol>
         </Grid>
+        <Overlay
+          color="#ffffff"
+          backgroundOpacity={0}
+          blur={4}
+          style={{ zIndex: -1 }}
+        />
       </AppShell.Footer>
     </AppShell>
   );
