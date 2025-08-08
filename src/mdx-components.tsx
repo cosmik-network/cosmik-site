@@ -19,7 +19,7 @@ const components: MDXComponents = {
       {children}
     </List>
   ),
-  li: ({ children }) => <ListItem>{children}</ListItem>,
+  li: ({ children }) => <ListItem fw={500}>{children}</ListItem>,
 };
 
 export function useMDXComponents(): MDXComponents {
