@@ -17,7 +17,7 @@ export default function Layout({
       <BackgroundImage
         src={"/images/vision-bg.webp"}
         pos={"fixed"}     
-        opacity={0.9}   
+        opacity={0.7}   
         inset={0}
         style={{ zIndex: -1 }}
       />
