@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Anchor,
-  Card,
-  SimpleGrid,
-  Stack,
-  Text,
-  UnstyledButton,
-} from "@mantine/core";
+import { Anchor, Card, SimpleGrid, Stack, Text } from "@mantine/core";
 import dynamic from "next/dynamic";
 
 const NoSSR = dynamic(

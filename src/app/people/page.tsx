@@ -33,65 +33,145 @@ export default function Page() {
           </Title>
         </Stack>
 
-        <SimpleGrid
-          cols={{ base: 1, xs: 2, sm: 4 }}
-          spacing={{ base: "xl", sm: "xs" }}
-        >
-          <Stack align="center" gap={"xs"}>
-            <Avatar src={"/images/ronen.png"} size={"xl"} alt="Ronen Tamari" />
-            <Stack align="center" gap={0} ta={"center"}>
-              <Anchor
-                href="https://ronentk.github.io/"
-                target="_blank"
-                fw={600}
-              >
-                Ronen Tamari
-              </Anchor>
-              <Text c={"gray"}>
-                {bios.filter((item) => item.slug === "ronen")[0].content}
-              </Text>
+        <Stack align="center" gap={"xl"}>
+          <Title order={3} fz={"h1"}>
+            Team
+          </Title>
+          <SimpleGrid
+            cols={{ base: 1, xs: 2, sm: 4 }}
+            spacing={{ base: "xl", sm: "xl" }}
+          >
+            <Stack align="center" gap={"xs"}>
+              <Avatar
+                src={"/images/ronen.webp"}
+                size={"180"}
+                alt="Ronen Tamari"
+              />
+              <Stack align="center" gap={0} ta={"center"}>
+                <Anchor
+                  href="https://ronentk.github.io/"
+                  target="_blank"
+                  fw={600}
+                >
+                  Ronen Tamari
+                </Anchor>
+                <Text c={"gray"} fw={500}>
+                  {bios.filter((item) => item.slug === "ronen")[0].content}
+                </Text>
+              </Stack>
             </Stack>
-          </Stack>
-          <Stack align="center" gap={"xs"}>
-            <Avatar src={"/images/shahar.png"} size={"xl"} alt="Shahar Oriel" />
-            <Stack align="center" gap={0} ta={"center"}>
-              <Anchor
-                href="https://www.linkedin.com/in/shahar-oriel/"
-                target="_blank"
-                fw={600}
-              >
-                Shahar Oriel
-              </Anchor>
-              <Text c={"gray"}>
-                {bios.filter((item) => item.slug === "shahar")[0].content}
-              </Text>
+            <Stack align="center" gap={"xs"}>
+              <Avatar
+                src={"/images/shahar.webp"}
+                size={"180"}
+                alt="Shahar Oriel"
+              />
+              <Stack align="center" gap={0} ta={"center"}>
+                <Anchor
+                  href="https://www.linkedin.com/in/shahar-oriel/"
+                  target="_blank"
+                  fw={600}
+                >
+                  Shahar Oriel
+                </Anchor>
+                <Text c={"gray"} fw={500}>
+                  {bios.filter((item) => item.slug === "shahar")[0].content}
+                </Text>
+              </Stack>
             </Stack>
-          </Stack>
-          <Stack align="center" gap={"xs"}>
-            <Avatar src={"/images/wesley.png"} size={"xl"} alt="Wesley Finck" />
-            <Stack align="center" gap={0} ta={"center"}>
-              <Anchor href="https://wesleyfinck.org/" target="_blank" fw={600}>
-                Wesley Finck
-              </Anchor>
-              <Text c={"gray"}>
-                {bios.filter((item) => item.slug === "wesley")[0].content}
-              </Text>
+            <Stack align="center" gap={"xs"}>
+              <Avatar
+                src={"/images/wesley.webp"}
+                size={"180"}
+                alt="Wesley Finck"
+              />
+              <Stack align="center" gap={0} ta={"center"}>
+                <Anchor
+                  href="https://wesleyfinck.org/"
+                  target="_blank"
+                  fw={600}
+                >
+                  Wesley Finck
+                </Anchor>
+                <Text c={"gray"} fw={500}>
+                  {bios.filter((item) => item.slug === "wesley")[0].content}
+                </Text>
+              </Stack>
             </Stack>
-          </Stack>
-          <Stack align="center" gap={"xs"}>
-            <Avatar size={"xl"} alt="Pouria Delfanazari">
-              PD
-            </Avatar>
-            <Stack align="center" gap={0} ta={"center"}>
-              <Anchor href="https://pouriade.com/" target="_blank" fw={600}>
-                Pouria Delfanazari
-              </Anchor>
-              <Text c={"gray"}>
-                {bios.filter((item) => item.slug === "pouria")[0].content}
-              </Text>
+            <Stack align="center" gap={"xs"}>
+              <Avatar size={"180"} alt="Pouria Delfanazari">
+                PD
+              </Avatar>
+              <Stack align="center" gap={0} ta={"center"}>
+                <Anchor href="https://pouriade.com/" target="_blank" fw={600}>
+                  Pouria Delfanazari
+                </Anchor>
+                <Text c={"gray"} fw={500}>
+                  {bios.filter((item) => item.slug === "pouria")[0].content}
+                </Text>
+              </Stack>
             </Stack>
-          </Stack>
-        </SimpleGrid>
+          </SimpleGrid>
+        </Stack>
+
+        <Stack align="center" gap={"xl"}>
+          <Title order={3} fz={"h1"}>
+            Advisory Circle
+          </Title>
+          <SimpleGrid
+            cols={{ base: 1, xs: 2, sm: 3 }}
+            spacing={{ base: "xl", sm: "xl" }}
+          >
+            <Stack align="center" gap={"xs"}>
+              <Avatar
+                src={"/images/maria.webp"}
+                size={"180"}
+                alt="Maria Antoniak"
+              />
+              <Stack align="center" gap={0} ta={"center"}>
+                <Anchor
+                  href="https://maria-antoniak.github.io/"
+                  target="_blank"
+                  fw={600}
+                >
+                  Maria Antoniak
+                </Anchor>
+              </Stack>
+            </Stack>
+            <Stack align="center" gap={"xs"}>
+              <Avatar
+                src={"/images/laure.webp"}
+                size={"180"}
+                alt="Laure Haak"
+              />
+              <Stack align="center" gap={0} ta={"center"}>
+                <Anchor
+                  href="https://www.mightyredbarn.com/"
+                  target="_blank"
+                  fw={600}
+                >
+                  Laure Haak
+                </Anchor>
+              </Stack>
+            </Stack>
+            <Stack align="center" gap={"xs"}>
+              <Avatar
+                src={"/images/boris.webp"}
+                size={"180"}
+                alt="Boris Mann"
+              />
+              <Stack align="center" gap={0} ta={"center"}>
+                <Anchor
+                  href="https://bmannconsulting.com/"
+                  target="_blank"
+                  fw={600}
+                >
+                  Boris Mann
+                </Anchor>
+              </Stack>
+            </Stack>
+          </SimpleGrid>
+        </Stack>
       </Stack>
     </Container>
   );
