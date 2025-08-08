@@ -71,7 +71,7 @@ export default function Header(props: Props) {
         </Menu>
         <Button
           component="a"
-          href="https://paragraph.com/@sense-nets"
+          href="https://blog.cosmik.network"
           target="_blank"
           variant="subtle"
           size="md"
