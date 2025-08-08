@@ -9,9 +9,9 @@ import {
 
 export default function ValuesContainer() {
   return (
-    <Accordion>
-      <AccordionItem value="1" py={"xs"}>
-        <AccordionControl>
+    <Accordion variant="contained">
+      <AccordionItem value="1" bg="white">
+        <AccordionControl py={"xs"} bg="white">
           <Text fz={"lg"} fw={500}>
             Enabling a permaculture of modular research
           </Text>
@@ -35,13 +35,13 @@ export default function ValuesContainer() {
         </AccordionPanel>
       </AccordionItem>
 
-      <AccordionItem value="2" py={"xs"}>
-        <AccordionControl>
+      <AccordionItem value="2" bg="white">
+        <AccordionControl py={"xs"}>
           <Text fz={"lg"} fw={500}>
             Networks that elicit and reward knowledge sharing
           </Text>
         </AccordionControl>
-        <AccordionPanel>
+        <AccordionPanel bg="white">
           <Text>
             New formats for publishing knowledge aren&apos;t enough - to make
             them worthwhile for researchers, we must <i>bring them to life</i>{" "}
@@ -53,13 +53,13 @@ export default function ValuesContainer() {
         </AccordionPanel>
       </AccordionItem>
 
-      <AccordionItem value="3" py={"xs"}>
-        <AccordionControl>
+      <AccordionItem value="3" bg="white">
+        <AccordionControl py={"xs"}>
           <Text fz={"lg"} fw={500}>
             Built to stay open and interoperable
           </Text>
         </AccordionControl>
-        <AccordionPanel>
+        <AccordionPanel bg="white">
           <Text>
             Small insights can become powerful building blocks when they&apos;re
             structured for discovery, interoperability and reuse. We leverage AI
@@ -69,13 +69,13 @@ export default function ValuesContainer() {
         </AccordionPanel>
       </AccordionItem>
 
-      <AccordionItem value="4" py={"xs"}>
-        <AccordionControl>
+      <AccordionItem value="4" bg="white">
+        <AccordionControl py={"xs"}>
           <Text fz={"lg"} fw={500}>
             Networks by researchers, for researchers
           </Text>
         </AccordionControl>
-        <AccordionPanel>
+        <AccordionPanel bg="white">
           <Text>
             Aggregated at scale, modular research contributions translate into
             value far greater than the sum of their parts. We leverage
