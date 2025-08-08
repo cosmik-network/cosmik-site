@@ -75,8 +75,6 @@ export default function AppLayout(props: Props) {
             <Button
               component="a"
               href="mailto:hello@cosmik.network"
-              variant="light"
-              bg={"gray.1"}
               leftSection={<FaEnvelope />}
             >
               hello@cosmik.network
