@@ -54,7 +54,7 @@ export default function ConnectContainer() {
             <Text ta={"center"} my={"auto"}>
               Schedule a 1:1 with us and share more about yourself and your
               interests{" "}
-              <Anchor href="" fw={600}>
+              <Anchor href="https://forms.cosmik.network/get-involved" target="_blank" fw={600}>
                 here
               </Anchor>
             </Text>
