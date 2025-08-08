@@ -13,7 +13,6 @@ import {
   Image,
   Menu,
   Space,
-  Stack,
   Text,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
@@ -26,6 +25,8 @@ import {
   FaDiscord,
 } from "react-icons/fa6";
 import { track } from "@vercel/analytics";
+import Navbar from "../navBar/Navbar";
+import Header from "../header/Header";
 
 interface Props {
   children: React.ReactNode;
@@ -43,7 +44,7 @@ export default function AppLayout(props: Props) {
       header={{ height: { base: 60 } }}
       navbar={{
         width: 300,
-        breakpoint: "xs",
+        breakpoint: "sm",
         collapsed: { desktop: true, mobile: !opened },
       }}
     >
@@ -210,7 +211,7 @@ export default function AppLayout(props: Props) {
         </Group>
       </AppShell.Navbar>
 
-      <AppShell.Main>{props.children}</AppShell.Main>
+      <AppShell.Main mt={"xl"}>{props.children}</AppShell.Main>
       <AppShell.Footer
         withBorder={false}
         px={"md"}
@@ -280,7 +281,7 @@ export default function AppLayout(props: Props) {
               </ActionIcon>
               <ActionIcon
                 component="a"
-                href=""
+                href="https://discord.gg/SHvvysb73e"
                 target="_blank"
                 variant="subtle"
                 size={"xl"}
