@@ -1,0 +1,22 @@
+## What we built
+
+Hyperfeed represented our exploration into addressing the limitations of traditional social media feeds for researchers. Launched as a closed beta in September 2024, it was designed to improve researchers discovery of research content across platforms. You can see a 1-minute demo of Hyperfeed here.
+
+### Core Features:
+- Cross-platform support - Bluesky, Mastodon and Twitter
+- AI-powered content curation that filtered research-related posts from noise and distractions
+- Automated semantic tagging that converted social media posts into structured semantic posts including keywords for salient topics and post type classification (recommendation, event sharing, new paper announcements, etc)
+- Focused sub-feeds organized by content type (job opportunities, calls for papers, research recommendations) and topics (open science, AI, etc)
+- A "semantic layer" for each mentioned reference that collected all posts mentioning that reference, showing sentiment analysis (agreement, disagreement, etc.) at a glance
+
+### What we learned
+**Non-linear hypertext vs linear feeds**: Hyperfeed, as the name suggests, combined ideas from both hypertext and feeds. Hyperfeed showed us the promise of moving beyond linear scrolling to more network-based exploration enabling flexible navigation through interconnected researchers, posts, references, and keywords
+**The power of structured data**: Even when users weren't explicitly creating structured content, our LLM pipeline converting posts to semantic formats enabled powerful new user experiences,  such as tabbed feeds, aggregation of comments by sentiment, or filtering non-research content.
+
+**Technical potential vs. UX challenges**: While the semantic knowledge graph showed great promise, we were missing key features like social graph-based personalization and an economic model covering Twitter and AI costs, limiting our path to an open beta.
+
+### Why we moved on
+
+Three key factors led us to move beyond Hyperfeed: the increasing difficulty of supporting Twitter's API, the emergence of Science Bluesky as a new research hub, and our growing conviction that active knowledge creation opens up fundamentally new possibilities beyond what passive consumption can achieve. We aren’t abandoning the Hyperfeed vision, but rather we recognized that building native tools for federated networks would provide a more solid foundation for future cross-platform work. Hyperfeed's learnings directly informed our current work on Semble. Once Semble establishes robust patterns for researcher-owned data and knowledge sharing on ATProto, we plan to revisit Hyperfeed's cross-platform, AI-enhanced aggregation approach from this stronger foundation.
+
+*Hyperfeed was developed as part of the Astera Institute’s 2024 Open Science fellowship*
