@@ -8,6 +8,7 @@ const components: MDXComponents = {
       {children}
     </Title>
   ),
+  h3: ({ children }) => <Title order={3} fw={600}>{children}</Title>,
   p: ({ children }) => <Text fw={500}>{children}</Text>,
   ul: ({ children }) => (
     <List maw={"96%"} type="unordered">
