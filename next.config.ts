@@ -21,6 +21,9 @@ const nextConfig: NextConfig = {
     }
     return headers;
   },
+  async redirects() {
+    return [{ source: "/home", destination: "/", permanent: true }];
+  },
 
   // Configure `pageExtensions` to include markdown and MDX files
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
