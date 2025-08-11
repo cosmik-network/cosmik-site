@@ -16,7 +16,7 @@ export default function ConnectContainer() {
       </Text>
       <SimpleGrid cols={{ base: 1, xs: 2, sm: 3 }} spacing={{ base: "sm" }}>
         <Card withBorder ta={"center"}>
-          <Stack gap={"xs"}>
+          <Stack gap={"xs"} my={"auto"}>
             <Text fw={600} fz={"lg"}>
               Contribute
             </Text>
@@ -43,7 +43,7 @@ export default function ConnectContainer() {
           </Stack>
         </Card>
         <Card withBorder ta={"center"}>
-          <Stack>
+          <Stack gap={"xs"} my={"auto"}>
             <Text fw={600} fz={"lg"}>
               Get involved
             </Text>
@@ -61,7 +61,7 @@ export default function ConnectContainer() {
           </Stack>
         </Card>
         <Card withBorder ta={"center"}>
-          <Stack gap={"xs"}>
+          <Stack gap={"xs"} my={"auto"}>
             <Text fw={600} fz={"lg"}>
               General inquiry
             </Text>
