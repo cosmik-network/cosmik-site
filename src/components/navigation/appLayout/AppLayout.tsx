@@ -11,7 +11,6 @@ import {
   Overlay,
   Text,
 } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
 import {
   FaBluesky,
   FaMastodon,
@@ -20,7 +19,6 @@ import {
   FaGithub,
   FaDiscord,
 } from "react-icons/fa6";
-import Navbar from "../navBar/Navbar";
 import Header from "../header/Header";
 
 interface Props {
@@ -28,32 +26,13 @@ interface Props {
 }
 
 export default function AppLayout(props: Props) {
-  const [opened, { toggle }] = useDisclosure();
-
   return (
-    <AppShell
-      header={{ height: { base: 60 } }}
-      navbar={{
-        width: 300,
-        breakpoint: "sm",
-        collapsed: { desktop: true, mobile: !opened },
-      }}
-    >
-      <AppShell.Header withBorder={false} bg={"transparent"} >
-        <Header isOpened={opened} onToggle={toggle} />
+    <AppShell>
+      <AppShell.Header withBorder={false} bg={"transparent"} pos={"static"}>
+        <Header />
       </AppShell.Header>
 
-      <AppShell.Navbar bg={"transparent"}>
-        <Navbar />
-        <Overlay
-          color="#ffffff"
-          backgroundOpacity={0}
-          blur={4}
-          style={{ zIndex: -1 }}
-        />
-      </AppShell.Navbar>
-
-      <AppShell.Main my={{ base: 60, sm: 100 }}>{props.children}</AppShell.Main>
+      <AppShell.Main my={{ base: 60, sm: 80 }}>{props.children}</AppShell.Main>
       <AppShell.Footer
         withBorder={false}
         px={"md"}

@@ -1,4 +1,4 @@
-import { BackgroundImage } from "@mantine/core";
+import { BackgroundImage, Box } from "@mantine/core";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,16 +12,15 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      {" "}
+    <Box>      
       <BackgroundImage
         src={"/images/vision-bg.webp"}
         pos={"fixed"}     
-        opacity={0.7}   
+        opacity={0.7}           
         inset={0}
         style={{ zIndex: -1 }}
-      />
+      />    
       {children}
-    </>
+    </Box>
   );
 }
