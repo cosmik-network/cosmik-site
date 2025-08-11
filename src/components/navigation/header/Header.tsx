@@ -13,6 +13,7 @@ import {
 import { IoChevronDown } from "react-icons/io5";
 import { track } from "@vercel/analytics";
 import { FaCircle } from "react-icons/fa6";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 export default function Header() {
   const handleWaitlistClick = () => {
@@ -131,6 +132,7 @@ export default function Header() {
               target="_blank"
               variant="subtle"
               size="md"
+              leftSection={<RiArrowRightUpLine />}
             >
               Blog
             </Button>

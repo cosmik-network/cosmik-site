@@ -2,8 +2,8 @@
 
 import ProjectCard from "@/components/contentDisplay/projectCard/ProjectCard";
 import { Stack, Tabs, Text } from "@mantine/core";
-import SembleScreenshot from "@/assets/images/semble-screenshot.png";
-import HyperfeedScreenshot from "@/assets/images/hyperfeed-screenshot.png";
+import SembleScreenshot from "@/assets/images/semble-screenshot.webp";
+import HyperfeedScreenshot from "@/assets/images/hyperfeed-screenshot.webp";
 
 export default function ProjectsContainer() {
   return (
