@@ -10,9 +10,10 @@ export default function Page() {
         alt={
           "Screenshot of Hyperfeed, showing the timeline, as well as a card view"
         }
-        h={500}
-        w={1000}
+        maw={1000}        
+        fit="contain"
         mx={"auto"}
+        px={"md"}
       />
       <Container size={"sm"}>
         <Stack gap={"lg"}>
