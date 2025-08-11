@@ -1,6 +1,6 @@
 "use client";
 
-import { ActionIcon, Anchor, Button, createTheme } from "@mantine/core";
+import { Anchor, createTheme } from "@mantine/core";
 
 export const theme = createTheme({
   primaryColor: "dark",
