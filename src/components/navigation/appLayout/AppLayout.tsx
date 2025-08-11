@@ -39,7 +39,7 @@ export default function AppLayout(props: Props) {
         collapsed: { desktop: true, mobile: !opened },
       }}
     >
-      <AppShell.Header withBorder={false} bg={"transparent"}>
+      <AppShell.Header withBorder={false} bg={"transparent"} >
         <Header isOpened={opened} onToggle={toggle} />
       </AppShell.Header>
 

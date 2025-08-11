@@ -9,7 +9,6 @@ import {
   Text,
 } from "@mantine/core";
 import { FaGithub, FaCircle } from "react-icons/fa6";
-import { useRouter } from "next/navigation";
 
 interface Props {
   name: string;
@@ -23,10 +22,8 @@ interface Props {
 }
 
 export default function ProjectCard(props: Props) {
-  const router = useRouter();
-
   return (
-    <Card px={"md"} py={"xs"}>
+    <Card px={"md"} py={"xs"} bg={"transparent"} withBorder>
       <Group justify="space-between" gap={0}>
         <Group gap={"xs"}>
           {props.logo && (
@@ -49,6 +46,7 @@ export default function ProjectCard(props: Props) {
       <Anchor href={props.projectLink} target="_blank">
         <Image
           src={props.backgroundImage}
+          alt={`Screenshot of ${props.name}`}
           radius={"md"}
           fit="contain"
           maw={700}
