@@ -24,7 +24,7 @@ interface Props {
 export default function ProjectCard(props: Props) {
   return (
     <Card px={"md"} py={"xs"} bg={"transparent"} withBorder>
-      <Group justify="space-between" gap={0}>
+      <Group justify="space-between" gap={"xs"}>
         <Group gap={"xs"}>
           {props.logo && (
             <Image
