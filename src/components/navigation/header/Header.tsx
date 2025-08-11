@@ -28,7 +28,11 @@ export default function Header() {
           </Anchor>
         </Grid.Col>
 
-        <Grid.Col span="content" order={{ base: 2, sm: 1 }}>
+        <Grid.Col
+          span={{ base: 12, sm: "content" }}
+          order={{ base: 2, sm: 1 }}
+          mx={"auto"}
+        >
           <Group justify="center" gap={"xs"}>
             <Menu withArrow shadow="md">
               <Menu.Target>
