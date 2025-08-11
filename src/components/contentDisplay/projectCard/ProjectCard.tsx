@@ -47,7 +47,7 @@ export default function ProjectCard(props: Props) {
         <Image
           src={props.backgroundImage}
           alt={`Screenshot of ${props.name}`}
-          radius={"md"}
+          radius={"xs"}
           fit="contain"
           maw={700}
           my={"5"}

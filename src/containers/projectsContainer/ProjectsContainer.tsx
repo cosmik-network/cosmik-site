@@ -8,7 +8,7 @@ import HyperfeedScreenshot from "@/assets/images/hyperfeed-screenshot.webp";
 export default function ProjectsContainer() {
   return (
     <Stack align="center">
-      <Tabs variant="pills" radius="xl" defaultValue="ongoing">
+      <Tabs variant="pills" radius="xs" defaultValue="ongoing">
         <Tabs.List justify="center" mb={"lg"}>
           <Tabs.Tab value="ongoing">
             <Text fz={"sm"} fw={600}>

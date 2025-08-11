@@ -7,21 +7,11 @@ export const theme = createTheme({
   fontFamily:
     "Archivo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
   fontFamilyMonospace: "IBM Plex Mono, Monaco, Courier, monospace",
-  defaultRadius: "lg",
+  defaultRadius: "xs",
   components: {
-    Button: Button.extend({
-      defaultProps: {
-        radius: "xl",
-      },
-    }),
     Anchor: Anchor.extend({
       defaultProps: {
         c: "#00B0FB",
-      },
-    }),
-    ActionIcon: ActionIcon.extend({
-      defaultProps: {
-        radius: "xl",
       },
     }),
   },
