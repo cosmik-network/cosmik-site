@@ -143,6 +143,7 @@ export default function Header() {
           <Button
             data-tally-open="31a9Ng"
             data-tally-hide-title="1"
+            data-tally-layout="modal"
             data-tally-emoji-animation="none"
             onClick={handleWaitlistClick}
           >
