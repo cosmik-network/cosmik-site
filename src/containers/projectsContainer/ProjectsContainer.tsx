@@ -26,7 +26,7 @@ export default function ProjectsContainer() {
           <ProjectCard
             name="Semble"
             description="Social bookmarking for intentional browsing"
-            logo="/images/semble-logo.png"
+            logo="/images/semble-logo.webp"
             year={2025}
             status="ongoing"
             githubLink="https://github.com/cosmik-network/semble"
@@ -38,7 +38,7 @@ export default function ProjectsContainer() {
           <ProjectCard
             name="Hyperfeed"
             description="Next-Generation Research Discovery"
-            logo="/images/hyperfeed-logo.png"
+            logo="/images/hyperfeed-logo.webp"
             year={2024}
             status="archived"
             githubLink="https://github.com/Common-SenseMakers/sensemakers"

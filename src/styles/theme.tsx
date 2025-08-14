@@ -11,7 +11,7 @@ export const theme = createTheme({
   components: {
     Anchor: Anchor.extend({
       defaultProps: {
-        c: "#00B0FB",
+        c: "#109EDA",
       },
     }),
   },

@@ -82,9 +82,9 @@ export default function Header() {
                   </Badge>
                   <Group gap={"xs"} mt={"xs"}>
                     <Image
-                      src={"/images/hyperfeed-logo.png"}
+                      src={"/images/semble-logo.webp"}
                       alt="Semble logo"
-                      w={40}
+                      w={"auto"}
                       h={40}
                     />
                     <Stack gap={0}>
@@ -111,9 +111,9 @@ export default function Header() {
                   </Badge>
                   <Group gap={"xs"} mt={"xs"}>
                     <Image
-                      src={"/images/hyperfeed-logo.png"}
+                      src={"/images/hyperfeed-logo.webp"}
                       alt="Hyperfeed logo"
-                      w={40}
+                      w={"auto"}
                       h={40}
                     />
                     <Stack gap={0}>

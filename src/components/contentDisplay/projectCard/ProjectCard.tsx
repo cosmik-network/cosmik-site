@@ -30,7 +30,7 @@ export default function ProjectCard(props: Props) {
             <Image
               src={props.logo}
               alt={`${props.name} logo`}
-              h={45}
+              h={30}
               w={"auto"}
             />
           )}
