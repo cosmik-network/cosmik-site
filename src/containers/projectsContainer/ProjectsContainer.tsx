@@ -25,7 +25,7 @@ export default function ProjectsContainer() {
         <Tabs.Panel value="ongoing">
           <ProjectCard
             name="Semble"
-            description="Social bookmarking for intentional browsing"
+            description="A social knowledge tool for researchers"
             logo="/images/semble-logo.webp"
             year={2025}
             status="ongoing"
