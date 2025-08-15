@@ -107,7 +107,7 @@ export default function Page() {
             </GridCol>
             <GridCol span={{ base: 12, xs: 6, sm: 3 }}>
               <Stack align="center" gap={"xs"}>
-                <Avatar size={"160"} alt="Pouria Delfanazari">
+                <Avatar src={"/images/pouria.webp"} size={"160"} alt="Pouria Delfanazari">
                   PD
                 </Avatar>
                 <Stack align="center" gap={0} ta={"center"}>
