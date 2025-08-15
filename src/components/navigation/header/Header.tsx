@@ -92,7 +92,7 @@ export default function Header() {
                         <Text fw={500}>Semble</Text>
                       </Group>
                       <Text c={"gray"} fz={"sm"}>
-                        A social knowledge tool for researchers
+                        A social knowledge network for researchers
                       </Text>
                     </Stack>
                   </Group>
