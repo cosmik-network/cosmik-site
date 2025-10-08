@@ -33,6 +33,7 @@ export default function Header() {
           span={{ base: 12, sm: "content" }}
           order={{ base: 2, sm: 1 }}
           mx={"auto"}
+          px={0}
         >
           <Group justify="center" gap={"xs"}>
             <Menu withArrow shadow="md">
