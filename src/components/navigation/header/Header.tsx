@@ -148,7 +148,7 @@ export default function Header() {
             data-tally-emoji-animation="none"
             onClick={handleWaitlistClick}
           >
-            Join waitlist
+            Stay in the loop
           </Button>
         </Grid.Col>
       </Grid>
