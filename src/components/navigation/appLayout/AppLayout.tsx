@@ -2,6 +2,7 @@
 
 import {
   ActionIcon,
+  Anchor,
   AppShell,
   Button,
   Grid,
@@ -43,10 +44,22 @@ export default function AppLayout(props: Props) {
       >
         <Grid justify="space-between" align="center" gutter={"md"}>
           <GridCol span={{ base: "content", sm: "auto" }} mx={"auto"}>
-            <Group gap={"xs"}>
-              <Image src={"/logo.svg"} alt="Cosmik logo" w={28} />
-              <Text fw={600}>© Cosmik {new Date().getFullYear()}</Text>
-            </Group>
+            <Anchor
+              href="https://www.homeworld.bio/"
+              target="_blank"
+              underline="never"
+            >
+              <Group gap={"xs"}>
+                <Image
+                  src={"/homeworld-logo-full.svg"}
+                  alt="Homeworld Collective logo"
+                  w={100}
+                />
+                <Text fw={600} fz={"sm"} c={"dimmed"}>
+                  © {new Date().getFullYear()}
+                </Text>
+              </Group>
+            </Anchor>
           </GridCol>
           <GridCol span={{ base: "content", sm: "auto" }} mx={"auto"}>
             <Button
