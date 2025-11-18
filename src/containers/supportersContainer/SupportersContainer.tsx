@@ -12,10 +12,10 @@ export default function SupportersContainer() {
             w={132}
           />
         </Anchor>
-        <Anchor href="https://www.openphilanthropy.org/" target="_blank">
+        <Anchor href="https://coefficientgiving.org/" target="_blank">
           <Image
-            src={"/images/open-philanthropy.svg"}
-            alt={"Open Philanthropy logo"}
+            src={"/images/coefficient-giving.svg"}
+            alt={"Coefficient Giving logo"}
             h={37}
             w={132}
           />
