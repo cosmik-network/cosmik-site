@@ -53,6 +53,9 @@ export default function Header() {
                 <Menu.Item component="a" href="/vision">
                   <Text fw={500}>Vision</Text>
                 </Menu.Item>
+                <Menu.Item component="a" href="https://docs.cosmik.network/">
+                  <Text fw={500}>Docs</Text>
+                </Menu.Item>
               </Menu.Dropdown>
             </Menu>
             <Menu withArrow shadow="md">
