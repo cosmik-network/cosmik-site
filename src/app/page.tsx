@@ -5,11 +5,11 @@ import SupportersContainer from "@/containers/supportersContainer/SupportersCont
 import ValuesContainer from "@/containers/valuesContainer/ValuesContainer";
 import { getContents } from "@/lib/utils/markdown";
 import { Container, Image, Stack, Title } from "@mantine/core";
+import Events from "@/app/content/home/events.mdx";
 
 export default function Page() {
   const contents = getContents("home");
   const tagline = contents.filter((item) => item.slug === "tagline")[0].content;
-  const events = contents.filter((item) => item.slug === "events")[0].content;
 
   return (
     <Container style={{ zIndex: 100 }}>
@@ -38,7 +38,9 @@ export default function Page() {
 
         <Stack id="events" align="center">
           <Title order={2}>Events</Title>
-          {events}
+          <Container size={"xs"}>
+            <Events />
+          </Container>
         </Stack>
 
         <Stack align="center">
