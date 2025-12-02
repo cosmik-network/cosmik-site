@@ -9,6 +9,7 @@ import { Container, Image, Stack, Title } from "@mantine/core";
 export default function Page() {
   const contents = getContents("home");
   const tagline = contents.filter((item) => item.slug === "tagline")[0].content;
+  const events = contents.filter((item) => item.slug === "events")[0].content;
 
   return (
     <Container style={{ zIndex: 100 }}>
@@ -33,6 +34,11 @@ export default function Page() {
         <Stack id="projects" align="center">
           <Title order={2}>Projects</Title>
           <ProjectsContainer />
+        </Stack>
+
+        <Stack id="events" align="center">
+          <Title order={2}>Events</Title>
+          {events}
         </Stack>
 
         <Stack align="center">
