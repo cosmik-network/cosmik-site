@@ -1,1 +1,3 @@
-Edit this file for events
+- 📆 Dec. 15, 2025: Presentation at [AGU 2025](https://www.agu.org/annual-meeting) conference (online)
+- 📆 Dec. 4: 2025: Semble demo at [Berkman Klein Center Applied Social Media Lab](https://cyber.harvard.edu/events/asml-2025-synthesizer) showcase event (Cambridge, MA)
+- 📆 Dec. 2, 2025: Presentation at [W3C Credentials Community Group](https://www.w3.org/community/credentials/) (online)
