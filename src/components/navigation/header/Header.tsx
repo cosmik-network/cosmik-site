@@ -14,6 +14,7 @@ import { IoChevronDown } from "react-icons/io5";
 import { track } from "@vercel/analytics";
 import { FaCircle } from "react-icons/fa6";
 import { RiArrowRightUpLine } from "react-icons/ri";
+import Link from "next/link";
 
 export default function Header() {
   const handleWaitlistClick = () => {
@@ -47,13 +48,16 @@ export default function Header() {
                 </Button>
               </Menu.Target>
               <Menu.Dropdown>
-                <Menu.Item component="a" href="/people">
+                <Menu.Item component={Link} href="/people">
                   <Text fw={500}>People</Text>
                 </Menu.Item>
-                <Menu.Item component="a" href="/vision">
+                <Menu.Item component={Link} href="/vision">
                   <Text fw={500}>Vision</Text>
                 </Menu.Item>
-                <Menu.Item component="a" href="https://docs.cosmik.network/">
+                <Menu.Item component={Link} href="/events">
+                  <Text fw={500}>Events</Text>
+                </Menu.Item>
+                <Menu.Item component={Link} href="https://docs.cosmik.network/">
                   <Text fw={500}>Docs</Text>
                 </Menu.Item>
               </Menu.Dropdown>
@@ -102,7 +106,7 @@ export default function Header() {
                   </Group>
                 </Menu.Item>
                 <Menu.Divider />
-                <Menu.Item component="a" href="/hyperfeed">
+                <Menu.Item component={Link} href="/hyperfeed">
                   <Badge
                     variant="transparent"
                     leftSection={<FaCircle size={8} />}
