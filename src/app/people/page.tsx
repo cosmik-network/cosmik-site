@@ -16,10 +16,7 @@ export default function Page() {
     .content;
   const bios = contents.filter(
     (item) =>
-      item.slug === "pouria" ||
-      item.slug === "ronen" ||
-      item.slug === "shahar" ||
-      item.slug === "wesley"
+      item.slug === "pouria" || item.slug === "ronen" || item.slug === "wesley",
   );
 
   return (
@@ -38,8 +35,8 @@ export default function Page() {
           <Title order={3} fz={"h1"}>
             Team
           </Title>
-          <Grid gutter={"xl"}>
-            <GridCol span={{ base: 12, xs: 6, sm: 3 }}>
+          <Grid gutter={"xl"} justify="center">
+            <GridCol span={{ base: 12, xs: 6, sm: 4 }}>
               <Stack align="center" gap={"xs"}>
                 <Avatar
                   src={"/images/ronen.webp"}
@@ -61,29 +58,7 @@ export default function Page() {
                 </Stack>
               </Stack>
             </GridCol>
-            <GridCol span={{ base: 12, xs: 6, sm: 3 }}>
-              <Stack align="center" gap={"xs"}>
-                <Avatar
-                  src={"/images/shahar.webp"}
-                  size={"160"}
-                  alt="Shahar Oriel"
-                />
-                <Stack align="center" gap={0} ta={"center"}>
-                  <Anchor
-                    href="https://www.linkedin.com/in/shahar-oriel/"
-                    target="_blank"
-                    fw={600}
-                    fz={"lg"}
-                  >
-                    Shahar Oriel
-                  </Anchor>
-                  <Text c={"gray"} fw={500} maw={160}>
-                    {bios.filter((item) => item.slug === "shahar")[0].content}
-                  </Text>
-                </Stack>
-              </Stack>
-            </GridCol>
-            <GridCol span={{ base: 12, xs: 6, sm: 3 }}>
+            <GridCol span={{ base: 12, xs: 6, sm: 4 }}>
               <Stack align="center" gap={"xs"}>
                 <Avatar
                   src={"/images/wesley.webp"}
@@ -105,9 +80,13 @@ export default function Page() {
                 </Stack>
               </Stack>
             </GridCol>
-            <GridCol span={{ base: 12, xs: 6, sm: 3 }}>
+            <GridCol span={{ base: 12, xs: 6, sm: 4 }}>
               <Stack align="center" gap={"xs"}>
-                <Avatar src={"/images/pouria.webp"} size={"160"} alt="Pouria Delfanazari">
+                <Avatar
+                  src={"/images/pouria.webp"}
+                  size={"160"}
+                  alt="Pouria Delfanazari"
+                >
                   PD
                 </Avatar>
                 <Stack align="center" gap={0} ta={"center"}>
@@ -206,6 +185,33 @@ export default function Page() {
                     fz={"lg"}
                   >
                     Robin Berjon
+                  </Anchor>
+                </Stack>
+              </Stack>
+            </GridCol>
+          </Grid>
+        </Stack>
+
+        <Stack align="center" gap={"xl"}>
+          <Title order={3} fz={"h1"}>
+            Alumni
+          </Title>
+          <Grid gutter={"xl"} grow>
+            <GridCol span={{ base: 12, xs: 6, sm: 3 }}>
+              <Stack align="center" gap={"xs"}>
+                <Avatar
+                  src={"/images/shahar.webp"}
+                  size={"160"}
+                  alt="Shahar Oriel"
+                />
+                <Stack align="center" gap={0} ta={"center"}>
+                  <Anchor
+                    href="https://www.linkedin.com/in/shahar-oriel/"
+                    target="_blank"
+                    fw={600}
+                    fz={"lg"}
+                  >
+                    Shahar Oriel
                   </Anchor>
                 </Stack>
               </Stack>
