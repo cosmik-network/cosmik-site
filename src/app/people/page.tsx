@@ -16,11 +16,8 @@ export default function Page() {
     .content;
   const bios = contents.filter(
     (item) =>
-      item.slug === "pouria" ||
-      item.slug === "ronen" ||
-      item.slug === "wesley"
+      item.slug === "pouria" || item.slug === "ronen" || item.slug === "wesley",
   );
-  const alumniBios = contents.filter((item) => item.slug === "shahar");
 
   return (
     <Container>
@@ -85,7 +82,11 @@ export default function Page() {
             </GridCol>
             <GridCol span={{ base: 12, xs: 6, sm: 4 }}>
               <Stack align="center" gap={"xs"}>
-                <Avatar src={"/images/pouria.webp"} size={"160"} alt="Pouria Delfanazari">
+                <Avatar
+                  src={"/images/pouria.webp"}
+                  size={"160"}
+                  alt="Pouria Delfanazari"
+                >
                   PD
                 </Avatar>
                 <Stack align="center" gap={0} ta={"center"}>
@@ -195,7 +196,7 @@ export default function Page() {
           <Title order={3} fz={"h1"}>
             Alumni
           </Title>
-          <Grid gutter={"xl"}>
+          <Grid gutter={"xl"} grow>
             <GridCol span={{ base: 12, xs: 6, sm: 3 }}>
               <Stack align="center" gap={"xs"}>
                 <Avatar
