@@ -213,6 +213,9 @@ export default function Page() {
                   >
                     Shahar Oriel
                   </Anchor>
+                  <Text c={"gray"} fw={500} maw={160}>
+                    Ex-co-founder
+                  </Text>
                 </Stack>
               </Stack>
             </GridCol>
