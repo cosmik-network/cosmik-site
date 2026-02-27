@@ -213,9 +213,25 @@ export default function Page() {
                   >
                     Shahar Oriel
                   </Anchor>
-                  <Text c={"gray"} fw={500} maw={160}>
-                    Ex-co-founder
-                  </Text>
+                </Stack>
+              </Stack>
+            </GridCol>
+            <GridCol span={{ base: 12, xs: 6, sm: 3 }}>
+              <Stack align="center" gap={"xs"}>
+                <Avatar
+                  src={"/images/pepo.webp"}
+                  size={"160"}
+                  alt="Pepo Ospina"
+                />
+                <Stack align="center" gap={0} ta={"center"}>
+                  <Anchor
+                    href="https://pepo.is/"
+                    target="_blank"
+                    fw={600}
+                    fz={"lg"}
+                  >
+                    Pepo Ospina
+                  </Anchor>
                 </Stack>
               </Stack>
             </GridCol>
