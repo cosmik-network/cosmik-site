@@ -1,12 +1,16 @@
-"use client";
+import {
+  Anchor,
+  Button,
+  Card,
+  Group,
+  SimpleGrid,
+  Stack,
+  Text,
+  TextInput,
+} from "@mantine/core";
 
-import { Anchor, Card, SimpleGrid, Stack, Text } from "@mantine/core";
-import dynamic from "next/dynamic";
-
-const NoSSR = dynamic(
-  () => import("../../components/forms/waitlistForm/WaitlistForm"),
-  { ssr: false }
-);
+const PUBLICATION_ID =
+  "at://did:plc:b2p6rujcgpenbtcjposmjuc3/site.standard.publication/3m3axfv5hms24";
 
 export default function ConnectContainer() {
   return (
@@ -82,7 +86,36 @@ export default function ConnectContainer() {
           </Stack>
         </Card>
       </SimpleGrid>
-      <NoSSR />
+
+      <Stack mt={"xl"}>
+        <Text>Subscribe to our blog to get the latest updates</Text>
+
+        <Card
+          p={"8"}
+          withBorder
+          w={{ base: "fit-content", sm: "auto" }}
+          mx={{ base: "auto", sm: 0 }}
+        >
+          <form action="https://leaflet.pub/api/subscribe_email" method="post">
+            <Group gap={"xs"} justify="space-between">
+              <input type="hidden" name="publication" value={PUBLICATION_ID} />
+              <TextInput
+                type="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+                size="xs"
+                radius={"xl"}
+                variant="unstyled"
+                mx={"5"}
+              />
+              <Button type="submit" size="xs">
+                Get updates
+              </Button>
+            </Group>
+          </form>
+        </Card>
+      </Stack>
     </Stack>
   );
 }

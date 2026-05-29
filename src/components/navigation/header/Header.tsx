@@ -9,12 +9,17 @@ import {
   Box,
   Badge,
   Grid,
+  Card,
+  TextInput,
 } from "@mantine/core";
 import { IoChevronDown } from "react-icons/io5";
 import { track } from "@vercel/analytics";
 import { FaCircle } from "react-icons/fa6";
 import { RiArrowRightUpLine } from "react-icons/ri";
 import Link from "next/link";
+
+const PUBLICATION_ID =
+  "at://did:plc:b2p6rujcgpenbtcjposmjuc3/site.standard.publication/3m3axfv5hms24";
 
 export default function Header() {
   const handleWaitlistClick = () => {
@@ -23,7 +28,13 @@ export default function Header() {
 
   return (
     <Box>
-      <Grid justify="space-between" align="center" px={"md"} py={"xs"}>
+      <Grid
+        justify="space-between"
+        align="center"
+        px={"md"}
+        py={"xs"}
+        gutter={"xs"}
+      >
         <Grid.Col span="content">
           <Anchor href="/">
             <Image src={"/logo-full.svg"} alt="Cosmik logo" w={144} h={46} />
@@ -32,8 +43,8 @@ export default function Header() {
 
         <Grid.Col
           span={{ base: 12, sm: "content" }}
-          order={{ base: 2, sm: 1 }}
-          mx={"auto"}
+          order={{ base: 1, sm: 1 }}
+          mx={{ base: "auto", sm: 0 }}
           px={0}
         >
           <Group justify="center" gap={"xs"}>
@@ -147,16 +158,39 @@ export default function Header() {
           </Group>
         </Grid.Col>
 
-        <Grid.Col span="content" order={{ base: 1, sm: 2 }}>
-          <Button
-            data-tally-open="31a9Ng"
-            data-tally-hide-title="1"
-            data-tally-layout="modal"
-            data-tally-emoji-animation="none"
-            onClick={handleWaitlistClick}
+        <Grid.Col span={{ base: 12, sm: "content" }} order={{ base: 2, sm: 2 }}>
+          <Card
+            p={"8"}
+            withBorder
+            w={{ base: "fit-content", sm: "auto" }}
+            mx={{ base: "auto", sm: 0 }}
           >
-            Stay in the loop
-          </Button>
+            <form
+              action="https://leaflet.pub/api/subscribe_email"
+              method="post"
+            >
+              <Group gap={"xs"}>
+                <input
+                  type="hidden"
+                  name="publication"
+                  value={PUBLICATION_ID}
+                />
+                <TextInput
+                  type="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                  size="xs"
+                  radius={"xl"}
+                  variant="unstyled"
+                  mx={"5"}
+                />
+                <Button type="submit" size="xs" onClick={handleWaitlistClick}>
+                  Get updates
+                </Button>
+              </Group>
+            </form>
+          </Card>
         </Grid.Col>
       </Grid>
     </Box>
