@@ -20,7 +20,7 @@ export default function ValuesContainer() {
           <Text>
             We’re working towards{" "}
             <Anchor
-              href="https://www.shishyko.com/essays/public-systems-of-science.html"
+              href="https://www.mira.science/"
               fw={600}
             >
               unpacking the research process
