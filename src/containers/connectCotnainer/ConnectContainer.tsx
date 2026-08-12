@@ -31,7 +31,7 @@ export default function ConnectContainer() {
             <Text>
               Join the{" "}
               <Anchor
-                href="https://discord.gg/SHvvysb73e"
+                href="https://discord.gg/vq7KzPkhCs"
                 target="_blank"
                 c={"#5865f2"}
                 fw={600}
